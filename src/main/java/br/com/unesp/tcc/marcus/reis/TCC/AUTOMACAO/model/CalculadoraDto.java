@@ -35,6 +35,16 @@ public class CalculadoraDto {
     private String plataformaUm;
     private String plataformaDois;
 
+    private double graficoProcesso;
+
+    private double graficoDesenvolvendoUm;
+    private double graficoImplementacaoUm;
+    private double graficoProducaoUm;
+
+    private double graficoDesenvolvendoDois;
+    private double graficoImplementacaoDois;
+    private double graficoProducaoDois;
+
 
 
 }

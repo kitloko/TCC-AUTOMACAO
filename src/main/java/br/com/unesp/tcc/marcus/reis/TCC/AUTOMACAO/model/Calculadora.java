@@ -14,6 +14,7 @@ import lombok.Setter;
 public class Calculadora {
 
     private double custoProcesso = 0.0;
+    private boolean custoProcessoProd;
     private double custoDesenvolvimento = 0.0;
     private double custoImplementacao = 0.0;
     private double custoManutencao = 0.0;

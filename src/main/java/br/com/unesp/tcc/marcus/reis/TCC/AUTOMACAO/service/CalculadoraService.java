@@ -26,26 +26,53 @@ public class CalculadoraService {
         return calculadoraDto;
     }
 
+
     private CalculadoraDto calculaDesenvolvimento(CalculadoraDto calculadoraDto, Calculadora calculadora) {
-        calculadoraDto.setDesenvolvendoUm(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos()));
-        calculadoraDto.setDesenvolvendoDois(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
-        return calculadoraDto;
+        if(calculadora.isCustoProcessoProd()) {
+            calculadoraDto.setDesenvolvendoUm(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos()));
+            calculadoraDto.setDesenvolvendoDois(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+            calculadoraDto.setGraficoDesenvolvendoUm(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos());
+            calculadoraDto.setGraficoDesenvolvendoDois(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos() + uipath.getCustoMensalidade());
+        }
+        else {
+            calculadoraDto.setDesenvolvendoUm(formatter.format(calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos()));
+            calculadoraDto.setDesenvolvendoDois(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+            calculadoraDto.setGraficoDesenvolvendoUm(calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos());
+            calculadoraDto.setGraficoDesenvolvendoDois(calculadora.getCustoDesenvolvimento() + calculadora.getCustoServicos() + uipath.getCustoMensalidade());
+        }
+
+       return calculadoraDto;
     }
 
     private CalculadoraDto calculaimplementacao(CalculadoraDto calculadoraDto, Calculadora calculadora) {
-        calculadoraDto.setImplementacaoUm(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos()));
-        calculadoraDto.setImplementacaoDois(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+        if(calculadora.isCustoProcessoProd()){
+            calculadoraDto.setImplementacaoUm(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos()));
+            calculadoraDto.setImplementacaoDois(formatter.format(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+            calculadoraDto.setGraficoImplementacaoUm(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos());
+            calculadoraDto.setGraficoImplementacaoDois(calculadora.getCustoProcesso() + calculadora.getCustoImplementacao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade());
+        }
+        else{
+            calculadoraDto.setImplementacaoUm(formatter.format(calculadora.getCustoImplementacao() + calculadora.getCustoServicos()));
+            calculadoraDto.setImplementacaoDois(formatter.format(calculadora.getCustoImplementacao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+            calculadoraDto.setGraficoImplementacaoUm(calculadora.getCustoImplementacao() + calculadora.getCustoServicos());
+            calculadoraDto.setGraficoImplementacaoDois(calculadora.getCustoImplementacao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade());
+        }
         return calculadoraDto;
     }
 
     private CalculadoraDto calculaProducao(CalculadoraDto calculadoraDto, Calculadora calculadora) {
         calculadoraDto.setProducaoUm(formatter.format(calculadora.getCustoManutencao() + calculadora.getCustoServicos()));
+        calculadoraDto.setGraficoProducaoUm(calculadora.getCustoManutencao() + calculadora.getCustoServicos());
+
         calculadoraDto.setProducaoDois(formatter.format(calculadora.getCustoManutencao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade()));
+        calculadoraDto.setGraficoProducaoDois(calculadora.getCustoManutencao() + calculadora.getCustoServicos() + uipath.getCustoMensalidade());
         return calculadoraDto;
     }
 
     private CalculadoraDto converteCalculadora(CalculadoraDto calculadoraDto, Calculadora calculadora) {
         calculadoraDto.setCustoProcesso(formatter.format(calculadora.getCustoProcesso()));
+        calculadoraDto.setGraficoProcesso(calculadora.getCustoProcesso());
+
         calculadoraDto.setCustoDesenvolvimento(formatter.format(calculadora.getCustoDesenvolvimento()));
         calculadoraDto.setCustoImplementacao(formatter.format(calculadora.getCustoImplementacao()));
         calculadoraDto.setCustoManutencao(formatter.format(calculadora.getCustoManutencao()));
@@ -55,9 +82,9 @@ public class CalculadoraService {
 
     private CalculadoraDto plataformas(CalculadoraDto calculadoraDto, Calculadora calculadora) {
 
-            insereplataforma(calculadoraDto);
-            reducaoCusto(calculadoraDto, calculadora);
-            roi(calculadoraDto, calculadora);
+        insereplataforma(calculadoraDto);
+        reducaoCusto(calculadoraDto, calculadora);
+        roi(calculadoraDto, calculadora);
 
         return calculadoraDto;
     }
@@ -81,13 +108,26 @@ public class CalculadoraService {
         double custo = calculadora.getCustoDesenvolvimento() + calculadora.getCustoImplementacao() + calculadora.getCustoManutencao() + calculadora.getCustoServicos();
 
         calculadoraDto.setRoiUm(String.format("%.2f%%",
-                ((( reducao - selenium.getCustoMensalidade())
-                        - custo) / custo) * 100));
+                ((reducao - custo) / custo) * 100));
 
         calculadoraDto.setRoiDois(String.format("%.2f%%",
-                ((( reducao - uipath.getCustoMensalidade())
+                (((reducao - uipath.getCustoMensalidade())
                         - custo) / custo) * 100));
         return calculadoraDto;
     }
+
+//    private CalculadoraDto roi(CalculadoraDto calculadoraDto, Calculadora calculadora) {
+//        double reducao = calculadora.getCustoProcesso() - calculadora.getCustoDesenvolvimento() - calculadora.getCustoImplementacao() - calculadora.getCustoManutencao() - calculadora.getCustoServicos();
+//        double custo = calculadora.getCustoDesenvolvimento() + calculadora.getCustoImplementacao() + calculadora.getCustoManutencao() + calculadora.getCustoServicos();
+//
+//        calculadoraDto.setRoiUm(String.format("%.2f%%",
+//                ((( reducao - selenium.getCustoMensalidade())
+//                        - custo) / custo) * 100));
+//
+//        calculadoraDto.setRoiDois(String.format("%.2f%%",
+//                ((( reducao - uipath.getCustoMensalidade())
+//                        - custo) / custo) * 100));
+//        return calculadoraDto;
+//    }
 
 }
