@@ -129,7 +129,7 @@
         </p>
     </form>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row g-4">
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -181,7 +181,124 @@
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">UiPath</h2>
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option selected>UiPath</option>
+                                <option value="1">Automation Anywhere</option>
+                                <option value="2">Blue Prismo</option>
+                                <option value="3">Microsoft Power Automate</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <button id="addAutomation" type="submit" class="btn btn-primary btn-lg mb-3"><i
+                                    class="bi bi-plus"></i></button>
+                        </div>
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvimento</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Implementação</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="implementacaoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Produção</div>
+                            </div>
+                            <span class="badge bg-success rounded-pill" id="producaoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Licença Mensal</div>
+                            </div>
+                            <span class="badge bg-secondary rounded-pill" id="licencaDois">R$ 0,00</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Redução de Custos do Processo</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="reducaoDois">R$ 0,00</span></h5>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Retorno sobre investimento</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="roiDois">0 %</span></h5>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="automationtres" style="display: none">
+            <div class="card">
+                <div class="card-body">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>UiPath</option>
+                        <option value="1">Automation Anywhere</option>
+                        <option value="2">Blue Prismo</option>
+                        <option value="3">Microsoft Power Automate</option>
+                    </select>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvimento</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Implementação</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="implementacaoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Produção</div>
+                            </div>
+                            <span class="badge bg-success rounded-pill" id="producaoDois">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Licença Mensal</div>
+                            </div>
+                            <span class="badge bg-secondary rounded-pill" id="licencaDois">R$ 0,00</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Redução de Custos do Processo</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="reducaoDois">R$ 0,00</span></h5>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Retorno sobre investimento</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="roiDois">0 %</span></h5>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="automationquatro" style="display: none">
+            <div class="card">
+                <div class="card-body">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>UiPath</option>
+                        <option value="1">Automation Anywhere</option>
+                        <option value="2">Blue Prismo</option>
+                        <option value="3">Microsoft Power Automate</option>
+                    </select>
                     <ol class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
@@ -240,119 +357,148 @@
 
     <script>
         $(document).ready(function () {
-            $("#frm_details").on("submit", function (event) {
-                event.preventDefault();
 
-                // Obtém os dados do formulário em formato JSON
-                var isChecked = $("#custoProcessoProd").is(":checked");
-                var formData = {};
-                formData["custoProcesso"] = $("#custoProcesso").val();
-                formData["custoDesenvolvimento"] = $("#custoDesenvolvimento").val();
-                formData["custoImplementacao"] = $("#custoImplementacao").val();
-                formData["custoManutencao"] = $("#custoManutencao").val();
-                formData["custoServicos"] = $("#custoServicos").val();
-                formData["custoProcessoProd"] = isChecked;
-                console.log(formData);
 
-                var data1 = {}
-                var data2 = {}
-                var data3 = {}
+            var count = 0;
 
-                // Envia o formulário com o formato JSON para o servidor
-                $.ajax({
-                    url: 'http://localhost:8080/api/calculadora/basica',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(formData),
-                    success: function (data) {
-                        console.log(data);
-                        $("#container").empty()
+            function showPage() {
+                if (count === 0) {
+                    $('#automationtres').show();
+                    count++;
+                    return;
+                }
 
-                        $("#custoProcessoInput").text(data.custoProcesso);
-                        $("#custoDesenvolvimentoInput").text(data.custoDesenvolvimento);
-                        $("#custoImplementacaoInput").text(data.custoImplementacao);
-                        $("#custoManutencaoInput").text(data.custoManutencao);
-                        $("#custoServicosInput").text(data.custoServicos);
+                if (count === 1) {
+                    $('#automationquatro').show();
+                    $('#addAutomation').hide();
+                    count++;
+                }
 
-                        $("#desenvolvimentoUm").text(data.desenvolvendoUm);
-                        $("#implementacaoUm").text(data.implementacaoUm);
-                        $("#producaoUm").text(data.producaoUm);
-                        $("#licencaUm").text(data.plataformaUm);
-                        $("#reducaoUm").text(data.reducaoUm);
-                        $("#roiUm").text(data.roiUm);
+                //2115,20 uipath
+                //PA 96 por usuario
+                //AA 3777,15
+                //IBM 4230,41
+                //Blue 4196,83
+            }
 
-                        $("#desenvolvimentoDois").text(data.desenvolvendoDois);
-                        $("#implementacaoDois").text(data.implementacaoDois);
-                        $("#producaoDois").text(data.producaoDois);
-                        $("#licencaDois").text(data.plataformaDois);
-                        $("#reducaoDois").text(data.reducaoDois);
-                        $("#roiDois").text(data.roiDois);
-
-                        // create data
-                        data1 = [
-                            ["Desenvolvimento", data.graficoDesenvolvendoUm],
-                            ["Implementação", data.graficoImplementacaoUm],
-                            ["Produção", data.graficoProducaoUm],
-                        ];
-
-                        // create data
-                        data2 = [
-                            ["Desenvolvimento", data.graficoDesenvolvendoDois],
-                            ["Implementação", data.graficoImplementacaoDois],
-                            ["Produção", data.graficoProducaoDois],
-                        ];
-
-                        // create data
-                        data3 = [
-                            ["Desenvolvimento", data.graficoProcesso],
-                            ["Implementação", data.graficoProcesso],
-                            ["Produção", data.graficoProcesso],
-                        ];
-
-                        // create a chart
-                        var chart = anychart.line();
-
-                        // create a line series and set the data
-                        var Selenium = chart.line(data1);
-                        Selenium.labels(true);
-                        Selenium.labels().fontColor("green");
-                        Selenium.labels().fontWeight(900);
-                        Selenium.labels().format("R$ {%value}");
-
-                        // create a line series and set the data
-                        var UiPath = chart.line(data2);
-                        UiPath.labels(true);
-                        UiPath.labels().fontColor("green");
-                        UiPath.labels().fontWeight(900);
-                        UiPath.labels().format("R$ {%value}");
-
-                        // create a line series and set the data
-                        var Processo = chart.line(data3);
-                        Processo.labels(true);
-                        Processo.labels().fontColor("green");
-                        Processo.labels().fontWeight(900);
-                        Processo.labels().format("R$ {%value}");
-
-                        // set the chart title
-                        chart.title("Custos do projeto");
-
-                        // set the titles of the axes
-                        var xAxis = chart.xAxis();
-                        xAxis.title("Momento");
-                        var yAxis = chart.yAxis();
-                        yAxis.title("Custo, R$");
-
-                        // set the container id
-                        chart.container("container");
-
-                        // initiate drawing the chart
-                        chart.draw();
-                    },
-                    error: function (e) {
-                        console.log("ERROR : ", e);
-                    }
-                });
+            $('#addAutomation').click(function () {
+                showPage();
             });
+
+                $("#frm_details").on("submit", function (event) {
+                    event.preventDefault();
+
+
+                    // Obtém os dados do formulário em formato JSON
+                    var isChecked = $("#custoProcessoProd").is(":checked");
+                    var formData = {};
+                    formData["custoProcesso"] = $("#custoProcesso").val();
+                    formData["custoDesenvolvimento"] = $("#custoDesenvolvimento").val();
+                    formData["custoImplementacao"] = $("#custoImplementacao").val();
+                    formData["custoManutencao"] = $("#custoManutencao").val();
+                    formData["custoServicos"] = $("#custoServicos").val();
+                    formData["custoProcessoProd"] = isChecked;
+                    console.log(formData);
+
+                    var data1 = {}
+                    var data2 = {}
+                    var data3 = {}
+
+                    // Envia o formulário com o formato JSON para o servidor
+                    $.ajax({
+                        url: 'http://localhost:8080/api/calculadora/basica',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(formData),
+                        success: function (data) {
+                            console.log(data);
+                            $("#container").empty()
+
+                            $("#custoProcessoInput").text(data.custoProcesso);
+                            $("#custoDesenvolvimentoInput").text(data.custoDesenvolvimento);
+                            $("#custoImplementacaoInput").text(data.custoImplementacao);
+                            $("#custoManutencaoInput").text(data.custoManutencao);
+                            $("#custoServicosInput").text(data.custoServicos);
+
+                            $("#desenvolvimentoUm").text(data.desenvolvendoUm);
+                            $("#implementacaoUm").text(data.implementacaoUm);
+                            $("#producaoUm").text(data.producaoUm);
+                            $("#licencaUm").text(data.plataformaUm);
+                            $("#reducaoUm").text(data.reducaoUm);
+                            $("#roiUm").text(data.roiUm);
+
+                            $("#desenvolvimentoDois").text(data.desenvolvendoDois);
+                            $("#implementacaoDois").text(data.implementacaoDois);
+                            $("#producaoDois").text(data.producaoDois);
+                            $("#licencaDois").text(data.plataformaDois);
+                            $("#reducaoDois").text(data.reducaoDois);
+                            $("#roiDois").text(data.roiDois);
+
+                            // create data
+                            data1 = [
+                                ["Desenvolvimento", data.graficoDesenvolvendoUm],
+                                ["Implementação", data.graficoImplementacaoUm],
+                                ["Produção", data.graficoProducaoUm],
+                            ];
+
+                            // create data
+                            data2 = [
+                                ["Desenvolvimento", data.graficoDesenvolvendoDois],
+                                ["Implementação", data.graficoImplementacaoDois],
+                                ["Produção", data.graficoProducaoDois],
+                            ];
+
+                            // create data
+                            data3 = [
+                                ["Desenvolvimento", data.graficoProcesso],
+                                ["Implementação", data.graficoProcesso],
+                                ["Produção", data.graficoProcesso],
+                            ];
+
+                            // create a chart
+                            var chart = anychart.line();
+
+                            // create a line series and set the data
+                            var Selenium = chart.line(data1);
+                            Selenium.labels(true);
+                            Selenium.labels().fontColor("green");
+                            Selenium.labels().fontWeight(900);
+                            Selenium.labels().format("R$ {%value}");
+
+                            // create a line series and set the data
+                            var UiPath = chart.line(data2);
+                            UiPath.labels(true);
+                            UiPath.labels().fontColor("green");
+                            UiPath.labels().fontWeight(900);
+                            UiPath.labels().format("R$ {%value}");
+
+                            // create a line series and set the data
+                            var Processo = chart.line(data3);
+                            Processo.labels(true);
+                            Processo.labels().fontColor("green");
+                            Processo.labels().fontWeight(900);
+                            Processo.labels().format("R$ {%value}");
+
+                            // set the chart title
+                            chart.title("Custos do projeto");
+
+                            // set the titles of the axes
+                            var xAxis = chart.xAxis();
+                            xAxis.title("Momento");
+                            var yAxis = chart.yAxis();
+                            yAxis.title("Custo, R$");
+
+                            // set the container id
+                            chart.container("container");
+
+                            // initiate drawing the chart
+                            chart.draw();
+                        },
+                        error: function (e) {
+                            console.log("ERROR : ", e);
+                        }
+                    });
+                });
         })
     </script>
 </div>
