@@ -10,10 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Selenium {
+public class Power {
 
-    private String nomePlataforma = "Selenium";
-    private double custoMensalidade = 0.0;
+    private String nomePlataforma = "Microsoft Power Automate";
+    private double custoMensalidade = 96.0;
     private String mensalidade;
     private String desenvolvendo;
     private String implementacao;

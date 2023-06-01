@@ -10,10 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Selenium {
+public class Automation {
 
-    private String nomePlataforma = "Selenium";
-    private double custoMensalidade = 0.0;
+    private String nomePlataforma = "Automation Anywhere";
+    private double custoMensalidade = 3777.0;
     private String mensalidade;
     private String desenvolvendo;
     private String implementacao;

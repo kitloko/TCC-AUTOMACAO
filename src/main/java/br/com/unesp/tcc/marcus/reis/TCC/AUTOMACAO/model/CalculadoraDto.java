@@ -17,34 +17,13 @@ public class CalculadoraDto {
     private String custoImplementacao;
     private String custoManutencao;
     private String custoServicos;
-    
-    private String desenvolvendoUm;
-    private String implementacaoUm;
-    private String producaoUm;
-    private String reducaoUm;
-    private String roiUm;
 
-    private String desenvolvendoDois;
-    private String implementacaoDois;
-    private String producaoDois;
-    private String reducaoDois;
-    private String roiDois;
-
-    private String nomeplataformaUm;
-    private String nomeplataformaDois;
-    private String plataformaUm;
-    private String plataformaDois;
+    private Selenium selenium;
+    private Uipath uipath;
+    private Automation automation;
+    private Power power;
 
     private double graficoProcesso;
-
-    private double graficoDesenvolvendoUm;
-    private double graficoImplementacaoUm;
-    private double graficoProducaoUm;
-
-    private double graficoDesenvolvendoDois;
-    private double graficoImplementacaoDois;
-    private double graficoProducaoDois;
-
 
 
 }
