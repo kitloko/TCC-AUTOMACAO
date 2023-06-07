@@ -1,6 +1,7 @@
 package br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.service;
 
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Calculadora;
+import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplex;
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Selenium;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,6 @@ public class CalculadoraServiceSelenium {
         plataformas(selenium, calculadora);
         return selenium;
     }
-
 
     private void calculaDesenvolvimento(Selenium selenium, Calculadora calculadora) {
         if (calculadora.isCustoProcessoProd()) {
@@ -69,5 +69,4 @@ public class CalculadoraServiceSelenium {
                 ((reducao - custo) / custo) * 100));
 
     }
-
 }

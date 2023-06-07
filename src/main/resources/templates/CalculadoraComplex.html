@@ -32,6 +32,7 @@
     <div class="row">
         <form action="#" method="post" id="frm_details" name="frm_details">
             <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -43,15 +44,6 @@
                     <div id="panelsStayOpen-collapseUm" class="accordion-collapse collapse show">
                         <div class="accordion-body">
                             <div class="row g-1 mb-3 mt-2">
-                                <!--        <div class="col">-->
-                                <!--            <div class="card h-100">-->
-                                <!--                <div class="card-body">-->
-                                <!--                    <h6 class="card-title">Custo Total de Colaboradores</h6>-->
-                                <!--                    <h1 class="card-text" th:text="'Anual R$ ' + ${greeting.totalColabAno}">R$ 0,00</h1>-->
-                                <!--                    <p class="card-text" th:text="'Mensal R$ ' + ${greeting.totalColab}">R$ 0,00</p>-->
-                                <!--                </div>-->
-                                <!--            </div>-->
-                                <!--        </div>-->
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
@@ -71,13 +63,13 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">Tempo p/ realizar o
+                                            <label for="tempoProcesso" class="form-label">Tempo p/ realizar o
                                                 processo</label>
-                                            <input type="time" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
-                                                   aria-describedby="custoDesenvolvimento"
+                                            <input type="time" class="form-control" id="tempoProcesso"
+                                                   name="tempoProcesso"
+                                                   aria-describedby="tempoProcesso"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="tempoProcessoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -85,12 +77,12 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoImplementacao" class="form-label">Custo de
+                                            <label for="custoColabProcesso" class="form-label">Custo de
                                                 colaboradores</label>
-                                            <input type="number" class="form-control" id="custoImplementacao"
-                                                   name="custoImplementacao"
-                                                   aria-describedby="custoImplementacao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoImplementacaoInput">R$ 0,00</h4>
+                                            <input type="number" class="form-control" id="custoColabProcesso"
+                                                   name="custoColabProcesso"
+                                                   aria-describedby="custoColabProcesso" value="0">
+                                            <h4 class="mt-4 card-text" id="custoColabProcessoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -98,12 +90,12 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoManutencao" class="form-label">Despesas
+                                            <label for="despesasProcesso" class="form-label">Despesas
                                                 Operacionais</label>
-                                            <input type="number" class="form-control" id="custoManutencao"
-                                                   name="custoManutencao"
-                                                   aria-describedby="custoManutencao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoManutencaoInput">R$ 0,00</h4>
+                                            <input type="number" class="form-control" id="despesasProcesso"
+                                                   name="despesasProcesso"
+                                                   aria-describedby="despesasProcesso" value="0">
+                                            <h4 class="mt-4 card-text" id="despesasProcessoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -112,6 +104,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -135,27 +128,10 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoProcesso" class="form-label">Custo do
+                                            <label for="custoDesenvolvimento" class="form-label">Custo do
                                                 Desenvolvimento</label>
-                                            <input type="number" class="form-control" id="custoProcesso"
+                                            <input type="number" class="form-control" id="custoDesenvolvimento"
                                                    name="custoProcesso"
-                                                   aria-describedby="custoProcesso"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoProcessoInput">R$ 0,00</h4>
-                                            <input type="checkbox" value="true" id="custoProcessoProd"
-                                                   name="custoProcessoProd">
-                                            Adicionar aos Calculos
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">Tempo de
-                                                Desenvolvimento</label>
-                                            <input type="time" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
                                                    aria-describedby="custoDesenvolvimento"
                                                    value="0">
                                             <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
@@ -166,12 +142,26 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoImplementacao" class="form-label">Custo de hardware e
+                                            <label for="tempoDesenvolvimento" class="form-label">Tempo de
+                                                Desenvolvimento</label>
+                                            <input type="time" class="form-control" id="tempoDesenvolvimento"
+                                                   name="custoDesenvolvimento"
+                                                   aria-describedby="tempoDesenvolvimento"
+                                                   value="0">
+                                            <h4 class="mt-4 card-text" id="tempoDesenvolvimentoInput">R$ 0,00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <label for="custoSoftware" class="form-label">Custo de hardware e
                                                 software</label>
-                                            <input type="number" class="form-control" id="custoImplementacao"
-                                                   name="custoImplementacao"
+                                            <input type="number" class="form-control" id="custoSoftware"
+                                                   name="custoSoftware"
                                                    aria-describedby="custoImplementacao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoImplementacaoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="custoSoftwareInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -180,6 +170,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -194,53 +185,51 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoProcesso" class="form-label">Custo da Implementação</label>
-                                            <input type="number" class="form-control" id="custoProcesso"
-                                                   name="custoProcesso"
-                                                   aria-describedby="custoProcesso"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoProcessoInput">R$ 0,00</h4>
-                                            <input type="checkbox" value="true" id="custoProcessoProd"
-                                                   name="custoProcessoProd">
-                                            Adicionar aos Calculos
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoManutencao" class="form-label">Hospedagem e
-                                                infraestrutura</label>
-                                            <input type="number" class="form-control" id="custoManutencao"
-                                                   name="custoManutencao"
-                                                   aria-describedby="custoManutencao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoManutencaoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">Treinamento</label>
-                                            <input type="number" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
-                                                   aria-describedby="custoDesenvolvimento"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoImplementacao" class="form-label">Documentação</label>
+                                            <label for="custoImplementacao" class="form-label">Custo da
+                                                Implementação</label>
                                             <input type="number" class="form-control" id="custoImplementacao"
                                                    name="custoImplementacao"
-                                                   aria-describedby="custoImplementacao" value="0">
+                                                   aria-describedby="custoImplementacao"
+                                                   value="0">
                                             <h4 class="mt-4 card-text" id="custoImplementacaoInput">R$ 0,00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <label for="custoInfra" class="form-label">Hospedagem e
+                                                infraestrutura</label>
+                                            <input type="number" class="form-control" id="custoInfra"
+                                                   name="custoInfra"
+                                                   aria-describedby="custoInfra" value="0">
+                                            <h4 class="mt-4 card-text" id="custoInfraInput">R$ 0,00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <label for="custoTreinamento" class="form-label">Treinamento</label>
+                                            <input type="number" class="form-control" id="custoTreinamento"
+                                                   name="custoTreinamento"
+                                                   aria-describedby="custoTreinamento"
+                                                   value="0">
+                                            <h4 class="mt-4 card-text" id="custoTreinamentoInput">R$ 0,00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <label for="custoDocumentacao" class="form-label">Documentação</label>
+                                            <input type="number" class="form-control" id="custoDocumentacao"
+                                                   name="custoDocumentacao"
+                                                   aria-describedby="custoDocumentacao" value="0">
+                                            <h4 class="mt-4 card-text" id="custoDocumentacaoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -249,6 +238,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -260,26 +250,16 @@
                     <div id="panelsStayOpen-collapseQuatro" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <div class="row g-1 mb-3 mt-2">
-
-                                <!--        <div class="col">-->
-                                <!--            <div class="card h-100">-->
-                                <!--                <div class="card-body">-->
-                                <!--                    <h6 class="card-title">Custo Total de Colaboradores</h6>-->
-                                <!--                    <h1 class="card-text" th:text="'Anual R$ ' + ${greeting.totalColabAno}">R$ 0,00</h1>-->
-                                <!--                    <p class="card-text" th:text="'Mensal R$ ' + ${greeting.totalColab}">R$ 0,00</p>-->
-                                <!--                </div>-->
-                                <!--            </div>-->
-                                <!--        </div>-->
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoProcesso" class="form-label">Custo do suporte
+                                            <label for="custoSuporte" class="form-label">Custo do suporte
                                                 técnico</label>
-                                            <input type="number" class="form-control" id="custoProcesso"
-                                                   name="custoProcesso"
-                                                   aria-describedby="custoProcesso"
+                                            <input type="number" class="form-control" id="custoSuporte"
+                                                   name="custoSuporte"
+                                                   aria-describedby="custoSuporte"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoProcessoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="custoSuporteInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -287,13 +267,13 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">Tempo
+                                            <label for="tempoContratadoSuporte" class="form-label">Tempo
                                                 contratado</label>
-                                            <input type="time" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
-                                                   aria-describedby="custoDesenvolvimento"
+                                            <input type="time" class="form-control" id="tempoContratadoSuporte"
+                                                   name="tempoContratadoSuporte"
+                                                   aria-describedby="tempoContratadoSuporte"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="tempoContratadoSuporteInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -302,6 +282,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -313,25 +294,15 @@
                     <div id="panelsStayOpen-collapseCinco" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <div class="row g-1 mb-3 mt-2">
-
-                                <!--        <div class="col">-->
-                                <!--            <div class="card h-100">-->
-                                <!--                <div class="card-body">-->
-                                <!--                    <h6 class="card-title">Custo Total de Colaboradores</h6>-->
-                                <!--                    <h1 class="card-text" th:text="'Anual R$ ' + ${greeting.totalColabAno}">R$ 0,00</h1>-->
-                                <!--                    <p class="card-text" th:text="'Mensal R$ ' + ${greeting.totalColab}">R$ 0,00</p>-->
-                                <!--                </div>-->
-                                <!--            </div>-->
-                                <!--        </div>-->
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoProcesso" class="form-label">API</label>
-                                            <input type="number" class="form-control" id="custoProcesso"
-                                                   name="custoProcesso"
-                                                   aria-describedby="custoProcesso"
+                                            <label for="custoApiServico" class="form-label">API</label>
+                                            <input type="number" class="form-control" id="custoApiServico"
+                                                   name="custoApiServico"
+                                                   aria-describedby="custoApiServico"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoProcessoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="custoApiServicoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -339,12 +310,12 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">CAPTCHA</label>
-                                            <input type="number" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
-                                                   aria-describedby="custoDesenvolvimento"
+                                            <label for="custoCaptchaServico" class="form-label">CAPTCHA</label>
+                                            <input type="number" class="form-control" id="custoCaptchaServico"
+                                                   name="custoCaptchaServico"
+                                                   aria-describedby="custoCaptchaServico"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="custoCaptchaServicoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -352,11 +323,11 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoImplementacao" class="form-label">CLOUD</label>
-                                            <input type="number" class="form-control" id="custoImplementacao"
-                                                   name="custoImplementacao"
-                                                   aria-describedby="custoImplementacao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoImplementacaoInput">R$ 0,00</h4>
+                                            <label for="custoCloudServico" class="form-label">CLOUD</label>
+                                            <input type="number" class="form-control" id="custoCloudServico"
+                                                   name="custoCloudServico"
+                                                   aria-describedby="custoCloudServico" value="0">
+                                            <h4 class="mt-4 card-text" id="custoCloudServicoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -364,11 +335,11 @@
                                 <div class="col">
                                     <div class="card h-100">
                                         <div class="card-body">
-                                            <label for="custoManutencao" class="form-label">PLATAFORMA</label>
-                                            <input type="number" class="form-control" id="custoManutencao"
-                                                   name="custoManutencao"
-                                                   aria-describedby="custoManutencao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoManutencaoInput">R$ 0,00</h4>
+                                            <label for="custoPlataformaServico" class="form-label">PLATAFORMA</label>
+                                            <input type="number" class="form-control" id="custoPlataformaServico"
+                                                   name="custoPlataformaServico"
+                                                   aria-describedby="custoPlataformaServico" value="0">
+                                            <h4 class="mt-4 card-text" id="custoPlataformaServicoInput">R$ 0,00</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -384,11 +355,11 @@
         </form>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row g-4">
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="card-title">Selenium</h2>
+                    <h5 class="card-title text-primary">Selenium</h5>
                     <p class="card-text">
                     <ol class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -434,9 +405,9 @@
             </div>
         </div>
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="card-title">UiPath</h2>
+                    <h5 class="card-title text-primary">UiPath</h5>
                     <ol class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
@@ -480,8 +451,100 @@
                 </div>
             </div>
         </div>
+        <div class="col" id="automationtres">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="text-primary card-title">Automation Anywhere</h5>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvimento</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoTres">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Implementação</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="implementacaoTres">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Produção</div>
+                            </div>
+                            <span class="badge bg-success rounded-pill" id="producaoTres">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Licença Mensal</div>
+                            </div>
+                            <span class="badge bg-secondary rounded-pill" id="licencaTres">R$ 0,00</span>
+                        </li>
 
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Redução de Custos do Processo</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="reducaoTres">R$ 0,00</span></h5>
+                        </li>
 
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Retorno sobre investimento</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="roiTres">0 %</span></h5>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="automationquatro">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Microsoft Power Automate</h5>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvimento</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoQuatro">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Implementação</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="implementacaoQuatro">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Produção</div>
+                            </div>
+                            <span class="badge bg-success rounded-pill" id="producaoQuatro">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Licença Mensal</div>
+                            </div>
+                            <span class="badge bg-secondary rounded-pill" id="licencaQuatro">R$ 0,00</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Redução de Custos do Processo</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="reducaoQuatro">R$ 0,00</span></h5>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Retorno sobre investimento</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="roiQuatro">0 %</span></h5>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row" style="height: 600px; width: 100%">
@@ -492,125 +555,204 @@
         </div>
     </div>
 
+</div>
 
-    <script>
-        $(document).ready(function () {
-            $("#frm_details").on("submit", function (event) {
-                event.preventDefault();
 
-                // Obtém os dados do formulário em formato JSON
-                var isChecked = $("#custoProcessoProd").is(":checked");
-                alert(isChecked);
-                var formData = {};
-                formData["custoProcesso"] = $("#custoProcesso").val();
-                formData["custoDesenvolvimento"] = $("#custoDesenvolvimento").val();
-                formData["custoImplementacao"] = $("#custoImplementacao").val();
-                formData["custoManutencao"] = $("#custoManutencao").val();
-                formData["custoServicos"] = $("#custoServicos").val();
-                formData["custoProcessoProd"] = isChecked;
-                console.log(formData);
+<script>
+    $(document).ready(function () {
+        $("#frm_details").on("submit", function (event) {
+            event.preventDefault();
 
-                var data1 = {}
-                var data2 = {}
-                var data3 = {}
+            // Obtém os dados do formulário em formato JSON
+            var isChecked = $("#custoProcessoProd").is(":checked");
+            var formData = {};
+            formData["custoProcesso"] = $("#custoProcesso").val();
+            formData["custoProcessoProd"] = isChecked;
+            formData["tempoProcesso"] = $("#tempoProcesso").val();
+            formData["custoColabProcesso"] = $("#custoColabProcesso").val();
+            formData["despesasProcesso"] = $("#despesasProcesso").val();
 
-                // Envia o formulário com o formato JSON para o servidor
-                $.ajax({
-                    url: 'http://localhost:8080/api/calculadora/basica',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(formData),
-                    success: function (data) {
-                        console.log(data);
-                        $("#container").empty()
+            formData["custoDesenvolvimento"] = $("#custoDesenvolvimento").val();
+            formData["tempoDesenvolvimento"] = $("#tempoDesenvolvimento").val();
+            formData["custoSoftware"] = $("#custoSoftware").val();
 
-                        $("#custoProcessoInput").text(data.custoProcesso);
-                        $("#custoDesenvolvimentoInput").text(data.custoDesenvolvimento);
-                        $("#custoImplementacaoInput").text(data.custoImplementacao);
-                        $("#custoManutencaoInput").text(data.custoManutencao);
-                        $("#custoServicosInput").text(data.custoServicos);
+            formData["custoImplementacao"] = $("#custoImplementacao").val();
+            formData["custoInfra"] = $("#custoInfra").val();
+            formData["custoTreinamento"] = $("#custoTreinamento").val();
+            formData["custoDocumentacao"] = $("#custoDocumentacao").val();
 
-                        $("#desenvolvimentoUm").text(data.desenvolvendoUm);
-                        $("#implementacaoUm").text(data.implementacaoUm);
-                        $("#producaoUm").text(data.producaoUm);
-                        $("#licencaUm").text(data.plataformaUm);
-                        $("#reducaoUm").text(data.reducaoUm);
-                        $("#roiUm").text(data.roiUm);
+            formData["custoSuporte"] = $("#custoSuporte").val();
+            formData["tempoContratadoSuporte"] = $("#tempoContratadoSuporte").val();
 
-                        $("#desenvolvimentoDois").text(data.desenvolvendoDois);
-                        $("#implementacaoDois").text(data.implementacaoDois);
-                        $("#producaoDois").text(data.producaoDois);
-                        $("#licencaDois").text(data.plataformaDois);
-                        $("#reducaoDois").text(data.reducaoDois);
-                        $("#roiDois").text(data.roiDois);
+            formData["custoApiServico"] = $("#custoApiServico").val();
+            formData["custoCaptchaServico"] = $("#custoCaptchaServico").val();
+            formData["custoCloudServico"] = $("#custoCloudServico").val();
+            formData["custoPlataformaServico"] = $("#custoPlataformaServico").val();
 
-                        // create data
-                        data1 = [
-                            ["Desenvolvimento", data.graficoDesenvolvendoUm],
-                            ["Implementação", data.graficoImplementacaoUm],
-                            ["Produção", data.graficoProducaoUm],
-                        ];
+            var data1 = {}
+            var data2 = {}
+            var data3 = {}
 
-                        // create data
-                        data2 = [
-                            ["Desenvolvimento", data.graficoDesenvolvendoDois],
-                            ["Implementação", data.graficoImplementacaoDois],
-                            ["Produção", data.graficoProducaoDois],
-                        ];
+            // Envia o formulário com o formato JSON para o servidor
+            $.ajax({
+                url: 'http://localhost:8080/api/calculadora/complex',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function (data) {
+                    console.log(data);
+                    $("#container").empty()
 
-                        // create data
-                        data3 = [
-                            ["Desenvolvimento", data.graficoProcesso],
-                            ["Implementação", data.graficoProcesso],
-                            ["Produção", data.graficoProcesso],
-                        ];
+                    $("#custoProcessoInput").text(data.custoProcesso);
+                    $("#custoDesenvolvimentoInput").text(data.custoDesenvolvimento);
+                    $("#custoImplementacaoInput").text(data.custoImplementacao);
+                    $("#custoManutencaoInput").text(data.custoManutencao);
+                    $("#custoServicosInput").text(data.custoServicos);
 
-                        // create a chart
-                        var chart = anychart.line();
+                    $("#desenvolvimentoUm").text(data.selenium.desenvolvendo);
+                    $("#implementacaoUm").text(data.selenium.implementacao);
+                    $("#producaoUm").text(data.selenium.producao);
+                    $("#licencaUm").text(data.selenium.plataforma);
+                    $("#reducaoUm").text(data.selenium.reducao);
+                    $("#roiUm").text(data.selenium.roi);
 
-                        // create a line series and set the data
-                        var Selenium = chart.line(data1);
-                        Selenium.labels(true);
-                        Selenium.labels().fontColor("green");
-                        Selenium.labels().fontWeight(900);
-                        Selenium.labels().format("R$ {%value}");
+                    $("#desenvolvimentoDois").text(data.uipath.desenvolvendo);
+                    $("#implementacaoDois").text(data.uipath.implementacao);
+                    $("#producaoDois").text(data.uipath.producao);
+                    $("#licencaDois").text(data.uipath.mensalidade);
+                    $("#reducaoDois").text(data.uipath.reducao);
+                    $("#roiDois").text(data.uipath.roi);
 
-                        // create a line series and set the data
-                        var UiPath = chart.line(data2);
-                        UiPath.labels(true);
-                        UiPath.labels().fontColor("green");
-                        UiPath.labels().fontWeight(900);
-                        UiPath.labels().format("R$ {%value}");
+                    $("#desenvolvimentoTres").text(data.automation.desenvolvendo);
+                    $("#implementacaoTres").text(data.automation.implementacao);
+                    $("#producaoTres").text(data.automation.producao);
+                    $("#licencaTres").text(data.automation.mensalidade);
+                    $("#reducaoTres").text(data.automation.reducao);
+                    $("#roiTres").text(data.automation.roi);
 
-                        // create a line series and set the data
-                        var Processo = chart.line(data3);
-                        Processo.labels(true);
-                        Processo.labels().fontColor("green");
-                        Processo.labels().fontWeight(900);
-                        Processo.labels().format("R$ {%value}");
+                    $("#desenvolvimentoQuatro").text(data.power.desenvolvendo);
+                    $("#implementacaoQuatro").text(data.power.implementacao);
+                    $("#producaoQuatro").text(data.power.producao);
+                    $("#licencaQuatro").text(data.power.mensalidade);
+                    $("#reducaoQuatro").text(data.power.reducao);
+                    $("#roiQuatro").text(data.power.roi);
 
-                        // set the chart title
-                        chart.title("Custos do projeto");
+                    // create data
+                    data1 = [
+                        ["Desenvolvimento", data.selenium.graficoDesenvolvendo],
+                        ["Implementação", data.selenium.graficoImplementacao],
+                        ["Produção", data.selenium.graficoProducao],
+                    ];
 
-                        // set the titles of the axes
-                        var xAxis = chart.xAxis();
-                        xAxis.title("Momento");
-                        var yAxis = chart.yAxis();
-                        yAxis.title("Custo, R$");
+                    // create data
+                    data2 = [
+                        ["Desenvolvimento", data.uipath.graficoDesenvolvendo],
+                        ["Implementação", data.uipath.graficoImplementacao],
+                        ["Produção", data.uipath.graficoProducao],
+                    ];
 
-                        // set the container id
-                        chart.container("container");
+                    data3 = [
+                        ["Desenvolvimento", data.automation.graficoDesenvolvendo],
+                        ["Implementação", data.automation.graficoImplementacao],
+                        ["Produção", data.automation.graficoProducao],
+                    ];
 
-                        // initiate drawing the chart
-                        chart.draw();
-                    },
-                    error: function (e) {
-                        console.log("ERROR : ", e);
-                    }
-                });
+                    data4 = [
+                        ["Desenvolvimento", data.power.graficoDesenvolvendo],
+                        ["Implementação", data.power.graficoImplementacao],
+                        ["Produção", data.power.graficoProducao],
+                    ];
+
+                    // create data
+                    data5 = [
+                        ["Desenvolvimento", data.graficoProcesso],
+                        ["Implementação", data.graficoProcesso],
+                        ["Produção", data.graficoProcesso],
+                    ];
+
+                    // create a chart
+                    var chart = anychart.line();
+
+                    // create line chart
+                    var chart = anychart.line();
+
+                    // set chart padding
+                    chart.padding([10, 20, 5, 20]);
+
+                    // turn on chart animation
+                    chart.animation(true);
+
+                    // turn on the crosshair
+                    chart.crosshair(true);
+
+                    // set chart title text settings
+                    chart.title('Custos dos projetos');
+
+                    // set y axis title
+                    chart.yAxis().title('Custo R$');
+
+                    // create a line series and set the data
+                    var Selenium = chart.line(data1);
+                    Selenium.name('Selenium');
+                    Selenium.markers(true);
+                    Selenium.labels(false);
+                    Selenium.labels().fontColor("green");
+                    Selenium.labels().fontWeight(900);
+                    Selenium.labels().format("R$ {%value}");
+
+                    // create a line series and set the data
+                    var UiPath = chart.line(data2);
+                    UiPath.name('UiPath');
+                    UiPath.markers(true);
+                    UiPath.labels(false);
+                    UiPath.labels().fontColor("green");
+                    UiPath.labels().fontWeight(900);
+                    UiPath.labels().format("R$ {%value}");
+
+                    // create a line series and set the data
+                    var Automation = chart.line(data3);
+                    Automation.name('Automation');
+                    Automation.markers(true);
+                    Automation.labels(false);
+                    Automation.labels().fontColor("green");
+                    Automation.labels().fontWeight(900);
+                    Automation.labels().format("R$ {%value}");
+
+                    // create a line series and set the data
+                    var Power = chart.line(data4);
+                    Power.name('Power');
+                    Power.markers(true);
+                    Power.labels(false);
+                    Power.labels().fontColor("green");
+                    Power.labels().fontWeight(900);
+                    Power.labels().format("R$ {%value}");
+
+
+                    // create a line series and set the data
+                    var Processo = chart.line(data5);
+                    Processo.name('Processo');
+                    Processo.markers(true);
+                    Processo.labels(true);
+                    Processo.labels().fontColor("green");
+                    Processo.labels().fontWeight(900);
+                    Processo.labels().format("R$ {%value}");
+
+                    // turn the legend on
+                    chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+
+                    // set the container id
+                    chart.container("container");
+
+                    // initiate drawing the chart
+                    chart.draw();
+                },
+                error: function (e) {
+                    console.log("ERROR : ", e);
+                }
             });
-        })
-    </script>
+        });
+    })
+</script>
 </div>
 
 
