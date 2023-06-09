@@ -16,11 +16,16 @@ public class Uipath {
     private double custoMensalidade = 2359.08;
     private String mensalidade;
     private String desenvolvendo;
+    private String tempoDesenvolvendo;
     private String implementacao;
+    private String suporte;
+    private String tempoSuporte;
     private String producao;
     private String reducao;
     private String roi;
     private double graficoDesenvolvendo;
     private double graficoImplementacao;
+    private double graficoServicos;
+    private double graficoSuporte;
     private double graficoProducao;
 }

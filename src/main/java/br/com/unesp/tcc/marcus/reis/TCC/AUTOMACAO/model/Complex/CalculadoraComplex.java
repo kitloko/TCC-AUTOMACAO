@@ -18,17 +18,33 @@ public class CalculadoraComplex {
     private double custoColabProcesso = 0.0;
     private double despesasProcesso = 0.0;
 
-    private double custoDesenvolvimento = 0.0;
-    private String tempoDesenvolvimento;
-    private double custoSoftware = 0.0;
+    private double custoDesenvolvimentoSelenium = 0.0;
+    private String tempoDesenvolvimentoSelenium;
+    private double custoSoftwareSelenium = 0.0;
 
-    private double custoImplementacao = 0.0;
-    private double custoInfra = 0.0;
-    private double custoTreinamento = 0.0;
-    private double custoDocumentacao = 0.0;
+    private double custoImplementacaoSelenium = 0.0;
+    private double custoInfraSelenium = 0.0;
+    private double custoTreinamentoSelenium = 0.0;
+    private double custoDocumentacaoSelenium = 0.0;
 
-    private double custoSuporteInput = 0.0;
-    private String tempoContratadoSuporte;
+    private double custoSuporteSelenium = 0.0;
+    private String tempoContratadoSuporteSelenium;
+
+
+
+    private double custoDesenvolvimentoUipath = 0.0;
+    private String tempoDesenvolvimentoUipath;
+    private double custoSoftwareUipath = 0.0;
+
+    private double custoImplementacaoUipath = 0.0;
+    private double custoInfraUipath = 0.0;
+    private double custoTreinamentoUipath = 0.0;
+    private double custoDocumentacaoUipath = 0.0;
+
+    private double custoSuporteInputUipath = 0.0;
+    private String tempoContratadoSuporteUipath;
+
+
 
     private double custoApiServico = 0.0;
     private double custoCaptchaServico = 0.0;

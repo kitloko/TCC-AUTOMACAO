@@ -115,57 +115,88 @@
                     </h2>
                     <div id="panelsStayOpen-collapseDois" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <div class="row g-1 mb-3 mt-2">
-                                <!--        <div class="col">-->
-                                <!--            <div class="card h-100">-->
-                                <!--                <div class="card-body">-->
-                                <!--                    <h6 class="card-title">Custo Total de Colaboradores</h6>-->
-                                <!--                    <h1 class="card-text" th:text="'Anual R$ ' + ${greeting.totalColabAno}">R$ 0,00</h1>-->
-                                <!--                    <p class="card-text" th:text="'Mensal R$ ' + ${greeting.totalColab}">R$ 0,00</p>-->
-                                <!--                </div>-->
-                                <!--            </div>-->
-                                <!--        </div>-->
+                            <div class="row gx-5 mb-3 mt-2 p-3">
+
                                 <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoDesenvolvimento" class="form-label">Custo do
-                                                Desenvolvimento</label>
-                                            <input type="number" class="form-control" id="custoDesenvolvimento"
-                                                   name="custoProcesso"
-                                                   aria-describedby="custoDesenvolvimento"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoDesenvolvimentoInput">R$ 0,00</h4>
+                                    <h5>Selenium</h5>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body border-bottom">
+                                                <label for="custoDesenvolvimentoSelenium" class="form-label">Custo do
+                                                    Desenvolvimento</label>
+                                                <input type="number" class="form-control"
+                                                       id="custoDesenvolvimentoSelenium"
+                                                       name="custoDesenvolvimentoSelenium"
+                                                       aria-describedby="custoDesenvolvimentoSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoDesenvolvimentoSeleniumInput">R$
+                                                    0,00</h4>
+                                            </div>
+
+                                            <div class="card-body border-bottom">
+                                                <label for="tempoDesenvolvimentoSelenium" class="form-label">Tempo de
+                                                    Desenvolvimento</label>
+                                                <input type="time" class="form-control"
+                                                       id="tempoDesenvolvimentoSelenium"
+                                                       name="tempoDesenvolvimentoSelenium"
+                                                       aria-describedby="tempoDesenvolvimentoSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoSeleniumInput">R$
+                                                    0,00</h4>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <label for="custoSoftwareSelenium" class="form-label">Custo de hardware
+                                                    e
+                                                    software</label>
+                                                <input type="number" class="form-control" id="custoSoftwareSelenium"
+                                                       name="custoSoftwareSelenium"
+                                                       aria-describedby="custoSoftwareSelenium" value="0">
+                                                <h4 class="mt-4 card-text" id="custoSoftwareSeleniumInput">R$ 0,00</h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="tempoDesenvolvimento" class="form-label">Tempo de
-                                                Desenvolvimento</label>
-                                            <input type="time" class="form-control" id="tempoDesenvolvimento"
-                                                   name="custoDesenvolvimento"
-                                                   aria-describedby="tempoDesenvolvimento"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="tempoDesenvolvimentoInput">R$ 0,00</h4>
+                                    <h5>UiPath</h5>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body border-bottom">
+                                                <label for="custoDesenvolvimentoUipath" class="form-label">Custo do
+                                                    Desenvolvimento</label>
+                                                <input type="number" class="form-control"
+                                                       id="custoDesenvolvimentoUipath"
+                                                       name="custoDesenvolvimentoUipath"
+                                                       aria-describedby="custoDesenvolvimentoUipath"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoDesenvolvimentoUipathInput">R$
+                                                    0,00</h4>
+                                            </div>
+                                            <div class="card-body border-bottom">
+                                                <label for="tempoDesenvolvimentoUipath" class="form-label">Tempo de
+                                                    Desenvolvimento</label>
+                                                <input type="time" class="form-control"
+                                                       id="tempoDesenvolvimentoUipath"
+                                                       name="tempoDesenvolvimentoUipath"
+                                                       aria-describedby="tempoDesenvolvimentoUipath"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoUipathInput">R$
+                                                    0,00</h4>
+                                            </div>
+                                            <div class="card-body border-bottom">
+                                                <label for="custoSoftwareUipath" class="form-label">Custo de
+                                                    hardware e
+                                                    software</label>
+                                                <input type="number" class="form-control" id="custoSoftwareUipath"
+                                                       name="custoSoftwareUipath"
+                                                       aria-describedby="custoSoftwareUipath" value="0">
+                                                <h4 class="mt-4 card-text" id="custoSoftwareUipathInput">R$
+                                                    0,00</h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoSoftware" class="form-label">Custo de hardware e
-                                                software</label>
-                                            <input type="number" class="form-control" id="custoSoftware"
-                                                   name="custoSoftware"
-                                                   aria-describedby="custoImplementacao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoSoftwareInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -181,55 +212,90 @@
                     </h2>
                     <div id="panelsStayOpen-collapseTres" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <div class="row g-1 mb-3 mt-2">
+                            <div class="row gx-5 mb-3 mt-2">
+
                                 <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoImplementacao" class="form-label">Custo da
-                                                Implementação</label>
-                                            <input type="number" class="form-control" id="custoImplementacao"
-                                                   name="custoImplementacao"
-                                                   aria-describedby="custoImplementacao"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoImplementacaoInput">R$ 0,00</h4>
+                                    <h5>Selenium</h5>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body border-bottom">
+                                                <label for="custoImplementacaoSelenium" class="form-label">Custo da
+                                                    Implementação</label>
+                                                <input type="number" class="form-control" id="custoImplementacaoSelenium"
+                                                       name="custoImplementacaoSelenium"
+                                                       aria-describedby="custoImplementacaoSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoImplementacaoSeleniumInput">R$ 0,00</h4>
+                                            </div>
+
+                                            <div class="card-body border-bottom">
+                                                <label for="custoInfraSelenium" class="form-label">Hospedagem e
+                                                    infraestrutura</label>
+                                                <input type="number" class="form-control" id="custoInfraSelenium"
+                                                       name="custoInfraSelenium"
+                                                       aria-describedby="custoInfraSelenium" value="0">
+                                                <h4 class="mt-4 card-text" id="custoInfraSeleniumInput">R$ 0,00</h4>
+                                            </div>
+
+                                            <div class="card-body border-bottom">
+                                                <label for="custoTreinamentoSelenium" class="form-label">Treinamento</label>
+                                                <input type="number" class="form-control" id="custoTreinamentoSelenium"
+                                                       name="custoTreinamentoSelenium"
+                                                       aria-describedby="custoTreinamentoSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoTreinamentoSeleniumInput">R$ 0,00</h4>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <label for="custoDocumentacaoSelenium" class="form-label">Documentação</label>
+                                                <input type="number" class="form-control" id="custoDocumentacaoSelenium"
+                                                       name="custoDocumentacaoSelenium"
+                                                       aria-describedby="custoDocumentacaoSelenium" value="0">
+                                                <h4 class="mt-4 card-text" id="custoDocumentacaoSeleniumInput">R$ 0,00</h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoInfra" class="form-label">Hospedagem e
-                                                infraestrutura</label>
-                                            <input type="number" class="form-control" id="custoInfra"
-                                                   name="custoInfra"
-                                                   aria-describedby="custoInfra" value="0">
-                                            <h4 class="mt-4 card-text" id="custoInfraInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <h5>UiPath</h5>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body border-bottom">
+                                                <label for="custoImplementacaoUipath" class="form-label">Custo da
+                                                    Implementação</label>
+                                                <input type="number" class="form-control" id="custoImplementacaoUipath"
+                                                       name="custoImplementacaoUipath"
+                                                       aria-describedby="custoImplementacaoUipath"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoImplementacaoUipathoInput">R$ 0,00</h4>
+                                            </div>
 
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoTreinamento" class="form-label">Treinamento</label>
-                                            <input type="number" class="form-control" id="custoTreinamento"
-                                                   name="custoTreinamento"
-                                                   aria-describedby="custoTreinamento"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoTreinamentoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                            <div class="card-body border-bottom">
+                                                <label for="custoInfraUipath" class="form-label">Hospedagem e
+                                                    infraestrutura</label>
+                                                <input type="number" class="form-control" id="custoInfraUipath"
+                                                       name="custoInfraUipath"
+                                                       aria-describedby="custoInfraUipath" value="0">
+                                                <h4 class="mt-4 card-text" id="custoInfraUipathInput">R$ 0,00</h4>
+                                            </div>
 
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoDocumentacao" class="form-label">Documentação</label>
-                                            <input type="number" class="form-control" id="custoDocumentacao"
-                                                   name="custoDocumentacao"
-                                                   aria-describedby="custoDocumentacao" value="0">
-                                            <h4 class="mt-4 card-text" id="custoDocumentacaoInput">R$ 0,00</h4>
+                                            <div class="card-body border-bottom">
+                                                <label for="custoTreinamentoUipath" class="form-label">Treinamento</label>
+                                                <input type="number" class="form-control" id="custoTreinamentoUipath"
+                                                       name="custoTreinamentoUipath"
+                                                       aria-describedby="custoTreinamentoUipath"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoTreinamentoUipathInput">R$ 0,00</h4>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <label for="custoDocumentacaoUipath" class="form-label">Documentação</label>
+                                                <input type="number" class="form-control" id="custoDocumentacaoUipath"
+                                                       name="custoDocumentacaoUipath"
+                                                       aria-describedby="custoDocumentacaoUipath" value="0">
+                                                <h4 class="mt-4 card-text" id="custoDocumentacaoUipathInput">R$ 0,00</h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -249,311 +315,342 @@
                     </h2>
                     <div id="panelsStayOpen-collapseQuatro" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <div class="row g-1 mb-3 mt-2">
+                            <div class="row gx-5 mb-3 mt-2">
+
                                 <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoSuporte" class="form-label">Custo do suporte
+                                    <h5>Selenium</h5>
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body border-bottom">
+                                                <label for="custoSuporteSelenium" class="form-label">Custo do suporte
+                                                    técnico</label>
+                                                <input type="number" class="form-control" id="custoSuporteSelenium"
+                                                       name="custoSuporteSelenium"
+                                                       aria-describedby="custoSuporteSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="custoSuporteSeleniumInput">R$ 0,00</h4>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <label for="tempoContratadoSuporteSelenium" class="form-label">Tempo
+                                                    contratado</label>
+                                                <input type="time" class="form-control" id="tempoContratadoSuporteSelenium"
+                                                       name="tempoContratadoSuporteSelenium"
+                                                       aria-describedby="tempoContratadoSuporteSelenium"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteSeleniumInput">R$
+                                                    0,00</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="col">
+                                <h5>UiPath</h5>
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body border-bottom">
+                                            <label for="custoSuporteUipath" class="form-label">Custo do suporte
                                                 técnico</label>
-                                            <input type="number" class="form-control" id="custoSuporte"
-                                                   name="custoSuporte"
-                                                   aria-describedby="custoSuporte"
+                                            <input type="number" class="form-control" id="custoSuporteUipath"
+                                                   name="custoSuporteUipath"
+                                                   aria-describedby="custoSuporteUipath"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="custoSuporteInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="custoSuporteUipathInput">R$ 0,00</h4>
+                                        </div>
+
+                                    <div class="col">
+                                            <div class="card-body">
+                                                <label for="tempoContratadoSuporteUipath" class="form-label">Tempo
+                                                    contratado</label>
+                                                <input type="time" class="form-control" id="tempoContratadoSuporteUipath"
+                                                       name="tempoContratadoSuporteUipath"
+                                                       aria-describedby="tempoContratadoSuporteUipath"
+                                                       value="0">
+                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteUipathInput">R$
+                                                    0,00</h4>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="tempoContratadoSuporte" class="form-label">Tempo
-                                                contratado</label>
-                                            <input type="time" class="form-control" id="tempoContratadoSuporte"
-                                                   name="tempoContratadoSuporte"
-                                                   aria-describedby="tempoContratadoSuporte"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="tempoContratadoSuporteInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseCinco" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseCinco">
-                            <h5 class="text-primary">Serviços</h5>
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseCinco" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <div class="row g-1 mb-3 mt-2">
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoApiServico" class="form-label">API</label>
-                                            <input type="number" class="form-control" id="custoApiServico"
-                                                   name="custoApiServico"
-                                                   aria-describedby="custoApiServico"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoApiServicoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoCaptchaServico" class="form-label">CAPTCHA</label>
-                                            <input type="number" class="form-control" id="custoCaptchaServico"
-                                                   name="custoCaptchaServico"
-                                                   aria-describedby="custoCaptchaServico"
-                                                   value="0">
-                                            <h4 class="mt-4 card-text" id="custoCaptchaServicoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoCloudServico" class="form-label">CLOUD</label>
-                                            <input type="number" class="form-control" id="custoCloudServico"
-                                                   name="custoCloudServico"
-                                                   aria-describedby="custoCloudServico" value="0">
-                                            <h4 class="mt-4 card-text" id="custoCloudServicoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <label for="custoPlataformaServico" class="form-label">PLATAFORMA</label>
-                                            <input type="number" class="form-control" id="custoPlataformaServico"
-                                                   name="custoPlataformaServico"
-                                                   aria-describedby="custoPlataformaServico" value="0">
-                                            <h4 class="mt-4 card-text" id="custoPlataformaServicoInput">R$ 0,00</h4>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="lead mt-3">
-                <button type="submit" class="btn btn-lg btn-danger fw-bold">Enviar</button>
-            </p>
-        </form>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseCinco" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseCinco">
+                        <h5 class="text-primary">Serviços</h5>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseCinco" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <div class="row g-1 mb-3 mt-2">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <label for="custoApiServico" class="form-label">API</label>
+                                        <input type="number" class="form-control" id="custoApiServico"
+                                               name="custoApiServico"
+                                               aria-describedby="custoApiServico"
+                                               value="0">
+                                        <h4 class="mt-4 card-text" id="custoApiServicoInput">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <label for="custoCaptchaServico" class="form-label">CAPTCHA</label>
+                                        <input type="number" class="form-control" id="custoCaptchaServico"
+                                               name="custoCaptchaServico"
+                                               aria-describedby="custoCaptchaServico"
+                                               value="0">
+                                        <h4 class="mt-4 card-text" id="custoCaptchaServicoInput">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <label for="custoCloudServico" class="form-label">CLOUD</label>
+                                        <input type="number" class="form-control" id="custoCloudServico"
+                                               name="custoCloudServico"
+                                               aria-describedby="custoCloudServico" value="0">
+                                        <h4 class="mt-4 card-text" id="custoCloudServicoInput">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <label for="custoPlataformaServico" class="form-label">PLATAFORMA</label>
+                                        <input type="number" class="form-control" id="custoPlataformaServico"
+                                               name="custoPlataformaServico"
+                                               aria-describedby="custoPlataformaServico" value="0">
+                                        <h4 class="mt-4 card-text" id="custoPlataformaServicoInput">R$ 0,00</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    <p class="lead mt-3">
+        <button type="submit" class="btn btn-lg btn-danger fw-bold">Enviar</button>
+    </p>
+    </form>
+</div>
 
-    <div class="row g-4">
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title text-primary">Selenium</h5>
-                    <p class="card-text">
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Desenvolvimento</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoUm">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Implementação</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="implementacaoUm">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Produção</div>
-                            </div>
-                            <span class="badge bg-success rounded-pill" id="producaoUm">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Licença Mensal</div>
-                            </div>
-                            <span class="badge bg-secondary rounded-pill" id="licencaUm">R$ 0,00</span>
-                        </li>
+<div class="row g-4">
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Selenium</h5>
+                <p class="card-text">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Desenvolvimento</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoUm">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Implementação</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="implementacaoUm">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Produção</div>
+                        </div>
+                        <span class="badge bg-success rounded-pill" id="producaoUm">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Licença Mensal</div>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill" id="licencaUm">R$ 0,00</span>
+                    </li>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Redução de Custos do Processo</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="reducaoUm">R$ 0,00</span></h5>
-                        </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Redução de Custos do Processo</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="reducaoUm">R$ 0,00</span></h5>
+                    </li>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Retorno sobre investimento</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="roiUm">0 %</span></h5>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title text-primary">UiPath</h5>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Desenvolvimento</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoDois">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Implementação</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="implementacaoDois">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Produção</div>
-                            </div>
-                            <span class="badge bg-success rounded-pill" id="producaoDois">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Licença Mensal</div>
-                            </div>
-                            <span class="badge bg-secondary rounded-pill" id="licencaDois">R$ 0,00</span>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Redução de Custos do Processo</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="reducaoDois">R$ 0,00</span></h5>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Retorno sobre investimento</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="roiDois">0 %</span></h5>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="col" id="automationtres">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="text-primary card-title">Automation Anywhere</h5>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Desenvolvimento</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoTres">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Implementação</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="implementacaoTres">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Produção</div>
-                            </div>
-                            <span class="badge bg-success rounded-pill" id="producaoTres">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Licença Mensal</div>
-                            </div>
-                            <span class="badge bg-secondary rounded-pill" id="licencaTres">R$ 0,00</span>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Redução de Custos do Processo</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="reducaoTres">R$ 0,00</span></h5>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Retorno sobre investimento</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="roiTres">0 %</span></h5>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="col" id="automationquatro">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title text-primary">Microsoft Power Automate</h5>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Desenvolvimento</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoQuatro">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Implementação</div>
-                            </div>
-                            <span class="badge bg-primary rounded-pill" id="implementacaoQuatro">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Produção</div>
-                            </div>
-                            <span class="badge bg-success rounded-pill" id="producaoQuatro">R$ 0,00</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Licença Mensal</div>
-                            </div>
-                            <span class="badge bg-secondary rounded-pill" id="licencaQuatro">R$ 0,00</span>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Redução de Custos do Processo</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="reducaoQuatro">R$ 0,00</span></h5>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto ">
-                                <div class="fw-bold">Retorno sobre investimento</div>
-                            </div>
-                            <h5><span class="badge bg-primary rounded-pill" id="roiQuatro">0 %</span></h5>
-                        </li>
-                    </ol>
-                </div>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Retorno sobre investimento</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="roiUm">0 %</span></h5>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">UiPath</h5>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Desenvolvimento</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoDois">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Implementação</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="implementacaoDois">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Produção</div>
+                        </div>
+                        <span class="badge bg-success rounded-pill" id="producaoDois">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Licença Mensal</div>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill" id="licencaDois">R$ 0,00</span>
+                    </li>
 
-    <div class="row" style="height: 600px; width: 100%">
-        <div class="col-md-12 mt-3 p-3">
-            <div class="card">
-                <div class="card-body" id="container" style="height: 500px; width: 100%"></div>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Redução de Custos do Processo</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="reducaoDois">R$ 0,00</span></h5>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Retorno sobre investimento</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="roiDois">0 %</span></h5>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
+    <div class="col" id="automationtres">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="text-primary card-title">Automation Anywhere</h5>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Desenvolvimento</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoTres">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Implementação</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="implementacaoTres">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Produção</div>
+                        </div>
+                        <span class="badge bg-success rounded-pill" id="producaoTres">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Licença Mensal</div>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill" id="licencaTres">R$ 0,00</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Redução de Custos do Processo</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="reducaoTres">R$ 0,00</span></h5>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Retorno sobre investimento</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="roiTres">0 %</span></h5>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="automationquatro">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Microsoft Power Automate</h5>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Desenvolvimento</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoQuatro">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Implementação</div>
+                        </div>
+                        <span class="badge bg-primary rounded-pill" id="implementacaoQuatro">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Produção</div>
+                        </div>
+                        <span class="badge bg-success rounded-pill" id="producaoQuatro">R$ 0,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Licença Mensal</div>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill" id="licencaQuatro">R$ 0,00</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Redução de Custos do Processo</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="reducaoQuatro">R$ 0,00</span></h5>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto ">
+                            <div class="fw-bold">Retorno sobre investimento</div>
+                        </div>
+                        <h5><span class="badge bg-primary rounded-pill" id="roiQuatro">0 %</span></h5>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="height: 600px; width: 100%">
+    <div class="col-md-12 mt-3 p-3">
+        <div class="card">
+            <div class="card-body" id="container" style="height: 500px; width: 100%"></div>
+        </div>
+    </div>
+</div>
 
 </div>
 

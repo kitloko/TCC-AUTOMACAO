@@ -30,5 +30,9 @@ public class CalculadoraComplexDto {
     private double graficoProcesso;
 
 
+    public CalculadoraComplexDto(Selenium selenium, Uipath uipath) {
+        this.selenium = selenium;
+        this.uipath = uipath;
+    }
 }
 

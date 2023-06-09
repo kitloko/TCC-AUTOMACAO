@@ -2,6 +2,7 @@ package br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.service;
 
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Calculadora;
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplex;
+import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplexDto;
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Selenium;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.text.NumberFormat;
 public class CalculadoraServiceSelenium {
     private final NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-    public Selenium calculadoraBasicaSelenium(Calculadora calculadora) {
+    public Selenium calculadoraBasicaSelenium(CalculadoraComplexDto calculadoraComplexDto,Calculadora calculadora) {
         Selenium selenium = new Selenium();
         calculaDesenvolvimento(selenium, calculadora);
         calculaimplementacao(selenium, calculadora);
