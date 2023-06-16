@@ -2,8 +2,6 @@ package br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.service.Complex;
 
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplex;
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplexDto;
-import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Selenium;
-import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Uipath;
 import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
@@ -19,27 +17,44 @@ public class CalculadoraServiceComplexImplementacao {
     }
 
     private void selenium(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
-        Double custoTotalProcesso = calculadora.getCustoImplementacaoSelenium() + calculadora.getCustoInfraSelenium() + calculadora.getCustoTreinamentoSelenium()+ calculadora.getCustoDocumentacaoSelenium();
+        Double custoTotalProcesso = implementacaoSelenium(calculadora);
 
         if (calculadora.isCustoProcessoProd()) {
-            calculadoraComplexDto.getSelenium().setImplementacao(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso));
+            calculadoraComplexDto.getSelenium().setTotalCustoImplementacao(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso));
             calculadoraComplexDto.getSelenium().setGraficoImplementacao(calculadora.getCustoProcesso() + custoTotalProcesso);
         } else {
-            calculadoraComplexDto.getSelenium().setImplementacao(formatter.format(custoTotalProcesso));
+            calculadoraComplexDto.getSelenium().setTotalCustoImplementacao(formatter.format(custoTotalProcesso));
             calculadoraComplexDto.getSelenium().setGraficoImplementacao(custoTotalProcesso);
         }
+        calculadoraComplexDto.getSelenium().setCustoImplementacao(formatter.format(calculadora.getCustoImplementacaoSelenium()));
+        calculadoraComplexDto.getSelenium().setCustoInfra(formatter.format(calculadora.getCustoInfraSelenium()));
+        calculadoraComplexDto.getSelenium().setCustoTreinamento(formatter.format(calculadora.getCustoTreinamentoSelenium()));
+        calculadoraComplexDto.getSelenium().setCustoDocumentacao(formatter.format(calculadora.getCustoDocumentacaoSelenium()));
     }
 
     private void uipath(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
-        Double custoTotalProcesso = calculadora.getCustoImplementacaoUipath() + calculadora.getCustoInfraUipath() + calculadora.getCustoTreinamentoUipath()+ calculadora.getCustoDocumentacaoUipath();
+        Double custoTotalProcesso = implementacaoUipath(calculadora);
 
         if (calculadora.isCustoProcessoProd()) {
-            calculadoraComplexDto.getUipath().setImplementacao(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
+            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
             calculadoraComplexDto.getUipath().setGraficoImplementacao(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
         } else {
-            calculadoraComplexDto.getUipath().setImplementacao(formatter.format(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
+            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
             calculadoraComplexDto.getUipath().setGraficoImplementacao(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
         }
+
+        calculadoraComplexDto.getUipath().setCustoImplementacao(formatter.format(calculadora.getCustoImplementacaoUipath()));
+        calculadoraComplexDto.getUipath().setCustoInfra(formatter.format(calculadora.getCustoInfraUipath()));
+        calculadoraComplexDto.getUipath().setCustoTreinamento(formatter.format(calculadora.getCustoTreinamentoUipath()));
+        calculadoraComplexDto.getUipath().setCustoDocumentacao(formatter.format(calculadora.getCustoDocumentacaoUipath()));
+    }
+
+    public double implementacaoSelenium(CalculadoraComplex calculadora) {
+        return calculadora.getCustoImplementacaoSelenium() + calculadora.getCustoInfraSelenium() + calculadora.getCustoTreinamentoSelenium() + calculadora.getCustoDocumentacaoSelenium();
+    }
+
+    public double implementacaoUipath(CalculadoraComplex calculadora) {
+        return calculadora.getCustoImplementacaoUipath() + calculadora.getCustoInfraUipath() + calculadora.getCustoTreinamentoUipath() + calculadora.getCustoDocumentacaoUipath();
     }
 
 }

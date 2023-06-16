@@ -15,18 +15,34 @@ public class Selenium {
     private String nomePlataforma = "Selenium";
     private double custoMensalidade = 0.0;
     private String mensalidade;
+
     private String desenvolvendo;
-    private String tempoDesenvolvendo;
     private String implementacao;
-    private String suporte;
-    private String tempoSuporte;
-    private String tempoServicos;
+
+    private String custoDesenvolvendo;
+    private String tempoDesenvolvendo;
+    private String custoSoftwareDesenvolvendo;
+    private String totalCustoDesenvolvendo;
+
+    private String custoImplementacao;
+    private String custoInfra;
+    private String custoTreinamento;
+    private String custoDocumentacao;
+    private String totalCustoImplementacao;
+
+    private String custoSuporte;
+    private String tempoContratadoSup;
+
     private String producao;
     private String reducao;
     private String roi;
+
     private double graficoDesenvolvendo;
     private double graficoImplementacao;
-    private double graficoServicos;
     private double graficoSuporte;
     private double graficoProducao;
+
+    private double dev;
+    private double imp;
+    private double sup;
 }

@@ -41,7 +41,7 @@ public class CalculadoraComplex {
     private double custoTreinamentoUipath = 0.0;
     private double custoDocumentacaoUipath = 0.0;
 
-    private double custoSuporteInputUipath = 0.0;
+    private double custoSuporteUipath = 0.0;
     private String tempoContratadoSuporteUipath;
 
 

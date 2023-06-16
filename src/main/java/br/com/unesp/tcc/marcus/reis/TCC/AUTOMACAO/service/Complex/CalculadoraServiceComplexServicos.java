@@ -11,15 +11,26 @@ public class CalculadoraServiceComplexServicos {
 
     private final NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-    public void calculadoraComplexSuporte(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
+    public void calculadoraComplexServicos(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
+
+        calculadoraComplexDto.getServicos().setCustoApiServico(formatter.format(calculadora.getCustoApiServico()));
+        calculadoraComplexDto.getServicos().setCustoCloudServico(formatter.format(calculadora.getCustoCloudServico()));
+        calculadoraComplexDto.getServicos().setCustoCaptchaServico(formatter.format(calculadora.getCustoCaptchaServico()));
+        calculadoraComplexDto.getServicos().setCustoPlataformaServico(formatter.format(calculadora.getCustoPlataformaServico()));
+
+
+        calculadoraComplexDto.getServicos().setCustoServicos(formatter.format(retornaServicos(calculadora)));
+        calculadoraComplexDto.getServicos().setGraficoServicos(retornaServicos(calculadora));
     }
 
-    private void selenium(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
+    public double retornaServicos(CalculadoraComplex calculadora) {
+        Double api = calculadora.getCustoApiServico();
+        Double clound = calculadora.getCustoCloudServico();
+        Double captcha = calculadora.getCustoCaptchaServico();
+        Double plataforma = calculadora.getCustoPlataformaServico();
 
+        return api + clound + captcha + plataforma;
     }
 
-    private void uipath(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
-
-    }
 
 }

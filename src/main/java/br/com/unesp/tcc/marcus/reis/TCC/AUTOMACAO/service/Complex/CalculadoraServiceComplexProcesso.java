@@ -1,7 +1,7 @@
 package br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.service.Complex;
 
-import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Automation;
 import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplex;
+import br.com.unesp.tcc.marcus.reis.TCC.AUTOMACAO.model.Complex.CalculadoraComplexDto;
 import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
@@ -11,19 +11,19 @@ public class CalculadoraServiceComplexProcesso {
 
     private final NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-    public void calculadoraComplexProcesso(CalculadoraComplex calculadora) {
+    public void calculadoraComplexProcesso(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
         Double custoProcesso = calculadora.getCustoProcesso();
         Double custoColabProcesso = calculadora.getCustoColabProcesso();
         Double despesasProcesso = calculadora.getDespesasProcesso();
+        String tempoProcesso = calculadora.getTempoProcesso();
 
-        String[] split = calculadora.getTempoProcesso().split("\\.");
-        String hora = split[0];
-        String minuto = split[1];
-        String tempo = String.valueOf(Integer.parseInt(hora) + 60) + Integer.parseInt(minuto);
-
-        Double custoProcessoMinuto = (Double.parseDouble(tempo)) / calculadora.getCustoProcesso();
-        Double custoProcessoHora = custoProcessoMinuto / 60;
+        calculadoraComplexDto.getProcesso().setCustoProcesso(formatter.format(custoProcesso));
+        calculadoraComplexDto.getProcesso().setCustoColabProcesso(formatter.format(custoColabProcesso));
+        calculadoraComplexDto.getProcesso().setDespesasProcesso(formatter.format(despesasProcesso));
+        calculadoraComplexDto.getProcesso().setTempoProcesso((Integer.parseInt(tempoProcesso) / 8) + " dias");
 
         Double custoTotalProcesso = custoProcesso + custoColabProcesso + despesasProcesso;
+        calculadoraComplexDto.getProcesso().setGraficoProcesso(custoTotalProcesso);
+
     }
 }

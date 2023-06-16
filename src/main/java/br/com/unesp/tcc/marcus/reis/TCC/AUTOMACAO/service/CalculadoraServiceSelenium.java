@@ -12,7 +12,7 @@ import java.text.NumberFormat;
 public class CalculadoraServiceSelenium {
     private final NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-    public Selenium calculadoraBasicaSelenium(CalculadoraComplexDto calculadoraComplexDto,Calculadora calculadora) {
+    public Selenium calculadoraBasicaSelenium(Calculadora calculadora) {
         Selenium selenium = new Selenium();
         calculaDesenvolvimento(selenium, calculadora);
         calculaimplementacao(selenium, calculadora);

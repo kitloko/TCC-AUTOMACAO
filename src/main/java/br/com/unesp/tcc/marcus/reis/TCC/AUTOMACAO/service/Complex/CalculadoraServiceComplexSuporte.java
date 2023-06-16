@@ -17,46 +17,33 @@ public class CalculadoraServiceComplexSuporte {
     }
 
     private void selenium(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
-        Double custoTotalProcesso = calculadora.getCustoSuporteSelenium();
+        Double custoTotalSuporte = retornaSuporteSelenium(calculadora);
+        String tempo = calculadora.getTempoContratadoSuporteSelenium();
 
-        String[] split = calculadora.getTempoContratadoSuporteSelenium().split("\\.");
-        String hora = split[0];
-        String minuto = split[1];
-        String tempo = String.valueOf(Integer.parseInt(hora) + 60) + Integer.parseInt(minuto);
 
-        Double custoProcessoMinuto = (Double.parseDouble(tempo)) / calculadora.getCustoDesenvolvimentoSelenium();
-        Double custoProcessoHora = custoProcessoMinuto / 60;
-
-        if (calculadora.isCustoProcessoProd()) {
-            calculadoraComplexDto.getSelenium().setSuporte(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso));
-            calculadoraComplexDto.getSelenium().setGraficoSuporte(calculadora.getCustoProcesso() + custoTotalProcesso);
-        } else {
-            calculadoraComplexDto.getSelenium().setSuporte(formatter.format(custoTotalProcesso));
-            calculadoraComplexDto.getSelenium().setGraficoSuporte(custoTotalProcesso);
-        }
-        calculadoraComplexDto.getSelenium().setTempoSuporte(tempo);
+        calculadoraComplexDto.getSelenium().setCustoSuporte(formatter.format(custoTotalSuporte));
+        calculadoraComplexDto.getSelenium().setGraficoSuporte(custoTotalSuporte);
+        calculadoraComplexDto.getSelenium().setTempoContratadoSup((Integer.parseInt(tempo) / 8) + " dias");
     }
 
     private void uipath(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
-        Double custoTotalProcesso = calculadora.getCustoImplementacaoUipath() + calculadora.getCustoInfraUipath() + calculadora.getCustoTreinamentoUipath()+ calculadora.getCustoDocumentacaoUipath();
+        Double custoTotalSuporte = retornaSuporteUipath(calculadora);
+        String tempo = calculadora.getTempoContratadoSuporteSelenium();
 
-        String[] split = calculadora.getTempoContratadoSuporteSelenium().split("\\.");
-        String hora = split[0];
-        String minuto = split[1];
-        String tempo = String.valueOf(Integer.parseInt(hora) + 60) + Integer.parseInt(minuto);
+        calculadoraComplexDto.getUipath().setCustoSuporte(formatter.format(custoTotalSuporte + calculadoraComplexDto.getUipath().getCustoMensalidade()));
+        calculadoraComplexDto.getUipath().setGraficoSuporte(custoTotalSuporte + calculadoraComplexDto.getUipath().getCustoMensalidade());
 
-        Double custoProcessoMinuto = (Double.parseDouble(tempo)) / calculadora.getCustoDesenvolvimentoSelenium();
-        Double custoProcessoHora = custoProcessoMinuto / 60;
+        calculadoraComplexDto.getUipath().setTempoContratadoSup((Integer.parseInt(tempo) / 8) + " dias");
+    }
 
-        if (calculadora.isCustoProcessoProd()) {
-            calculadoraComplexDto.getUipath().setSuporte(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-            calculadoraComplexDto.getUipath().setGraficoSuporte(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
-        } else {
-            calculadoraComplexDto.getUipath().setSuporte(formatter.format(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-            calculadoraComplexDto.getUipath().setGraficoSuporte(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
-        }
+    public double retornaSuporteSelenium(CalculadoraComplex calculadora) {
+        return calculadora.getCustoSuporteSelenium();
+    }
 
-        calculadoraComplexDto.getUipath().setTempoSuporte(tempo);
+    public double retornaSuporteUipath(CalculadoraComplex calculadora) {
+        return calculadora.getCustoSuporteUipath();
+
+
     }
 
 }

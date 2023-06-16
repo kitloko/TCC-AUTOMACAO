@@ -65,11 +65,11 @@
                                         <div class="card-body">
                                             <label for="tempoProcesso" class="form-label">Tempo p/ realizar o
                                                 processo</label>
-                                            <input type="time" class="form-control" id="tempoProcesso"
+                                            <input type="number" class="form-control" id="tempoProcesso"
                                                    name="tempoProcesso"
                                                    aria-describedby="tempoProcesso"
                                                    value="0">
-                                            <h4 class="mt-4 card-text" id="tempoProcessoInput">R$ 0,00</h4>
+                                            <h4 class="mt-4 card-text" id="tempoProcessoInput">0</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -136,13 +136,12 @@
                                             <div class="card-body border-bottom">
                                                 <label for="tempoDesenvolvimentoSelenium" class="form-label">Tempo de
                                                     Desenvolvimento</label>
-                                                <input type="time" class="form-control"
+                                                <input type="number" class="form-control"
                                                        id="tempoDesenvolvimentoSelenium"
                                                        name="tempoDesenvolvimentoSelenium"
                                                        aria-describedby="tempoDesenvolvimentoSelenium"
                                                        value="0">
-                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoSeleniumInput">R$
-                                                    0,00</h4>
+                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoSeleniumInput">0</h4>
                                             </div>
 
                                             <div class="card-body">
@@ -176,13 +175,12 @@
                                             <div class="card-body border-bottom">
                                                 <label for="tempoDesenvolvimentoUipath" class="form-label">Tempo de
                                                     Desenvolvimento</label>
-                                                <input type="time" class="form-control"
+                                                <input type="number" class="form-control"
                                                        id="tempoDesenvolvimentoUipath"
                                                        name="tempoDesenvolvimentoUipath"
                                                        aria-describedby="tempoDesenvolvimentoUipath"
                                                        value="0">
-                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoUipathInput">R$
-                                                    0,00</h4>
+                                                <h4 class="mt-4 card-text" id="tempoDesenvolvimentoUipathInput">0</h4>
                                             </div>
                                             <div class="card-body border-bottom">
                                                 <label for="custoSoftwareUipath" class="form-label">Custo de
@@ -334,12 +332,11 @@
                                             <div class="card-body">
                                                 <label for="tempoContratadoSuporteSelenium" class="form-label">Tempo
                                                     contratado</label>
-                                                <input type="time" class="form-control" id="tempoContratadoSuporteSelenium"
+                                                <input type="number" class="form-control" id="tempoContratadoSuporteSelenium"
                                                        name="tempoContratadoSuporteSelenium"
                                                        aria-describedby="tempoContratadoSuporteSelenium"
                                                        value="0">
-                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteSeleniumInput">R$
-                                                    0,00</h4>
+                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteSeleniumInput">0</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -363,12 +360,11 @@
                                             <div class="card-body">
                                                 <label for="tempoContratadoSuporteUipath" class="form-label">Tempo
                                                     contratado</label>
-                                                <input type="time" class="form-control" id="tempoContratadoSuporteUipath"
+                                                <input type="number" class="form-control" id="tempoContratadoSuporteUipath"
                                                        name="tempoContratadoSuporteUipath"
                                                        aria-describedby="tempoContratadoSuporteUipath"
                                                        value="0">
-                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteUipathInput">R$
-                                                    0,00</h4>
+                                                <h4 class="mt-4 card-text" id="tempoContratadoSuporteUipathInput">0</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -457,197 +453,108 @@
         <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title text-primary">Selenium</h5>
-                <p class="card-text">
                 <ol class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Desenvolvimento</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoUm">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Implementação</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="implementacaoUm">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Produção</div>
-                        </div>
-                        <span class="badge bg-success rounded-pill" id="producaoUm">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Licença Mensal</div>
-                        </div>
-                        <span class="badge bg-secondary rounded-pill" id="licencaUm">R$ 0,00</span>
-                    </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Desenvolvimento</div>
+                    </div>
+                    <span class="badge bg-primary rounded-pill" id="desenvolvimentoSelenium">R$ 0,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Implementação</div>
+                    </div>
+                    <span class="badge bg-primary rounded-pill" id="implementacaoSelenium">R$ 0,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Produção</div>
+                    </div>
+                    <span class="badge bg-success rounded-pill" id="producaoSelenium">R$ 0,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Licença Mensal</div>
+                    </div>
+                    <span class="badge bg-secondary rounded-pill" id="licencaSelenium">R$ 0,00</span>
+                </li>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Redução de Custos do Processo</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="reducaoUm">R$ 0,00</span></h5>
-                    </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto ">
+                        <div class="fw-bold">Redução de Custos do Processo</div>
+                    </div>
+                    <h5><span class="badge bg-primary rounded-pill" id="reducaoSelenium">R$ 0,00</span></h5>
+                </li>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Retorno sobre investimento</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="roiUm">0 %</span></h5>
-                    </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto ">
+                        <div class="fw-bold">Retorno sobre investimento</div>
+                    </div>
+                    <h5><span class="badge bg-primary rounded-pill" id="roiSelenium">0 %</span></h5>
+                </li>
                 </ol>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title text-primary">UiPath</h5>
-                <ol class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Desenvolvimento</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoDois">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Implementação</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="implementacaoDois">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Produção</div>
-                        </div>
-                        <span class="badge bg-success rounded-pill" id="producaoDois">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Licença Mensal</div>
-                        </div>
-                        <span class="badge bg-secondary rounded-pill" id="licencaDois">R$ 0,00</span>
-                    </li>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Redução de Custos do Processo</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="reducaoDois">R$ 0,00</span></h5>
-                    </li>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Uipath</h5>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvimento</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="desenvolvimentoUipath">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Implementação</div>
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="implementacaoUipath">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Produção</div>
+                            </div>
+                            <span class="badge bg-success rounded-pill" id="producaoUipath">R$ 0,00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Licença Mensal</div>
+                            </div>
+                            <span class="badge bg-secondary rounded-pill" id="licencaUipath">R$ 0,00</span>
+                        </li>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Retorno sobre investimento</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="roiDois">0 %</span></h5>
-                    </li>
-                </ol>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Redução de Custos do Processo</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="reducaoUipath">R$ 0,00</span></h5>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold">Retorno sobre investimento</div>
+                            </div>
+                            <h5><span class="badge bg-primary rounded-pill" id="roiUipath">0 %</span></h5>
+                        </li>
+                    </ol>
+                </div>
             </div>
-        </div>
     </div>
-    <div class="col" id="automationtres">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="text-primary card-title">Automation Anywhere</h5>
-                <ol class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Desenvolvimento</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoTres">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Implementação</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="implementacaoTres">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Produção</div>
-                        </div>
-                        <span class="badge bg-success rounded-pill" id="producaoTres">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Licença Mensal</div>
-                        </div>
-                        <span class="badge bg-secondary rounded-pill" id="licencaTres">R$ 0,00</span>
-                    </li>
-
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Redução de Custos do Processo</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="reducaoTres">R$ 0,00</span></h5>
-                    </li>
-
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Retorno sobre investimento</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="roiTres">0 %</span></h5>
-                    </li>
-                </ol>
-            </div>
-        </div>
     </div>
-    <div class="col" id="automationquatro">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title text-primary">Microsoft Power Automate</h5>
-                <ol class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Desenvolvimento</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="desenvolvimentoQuatro">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Implementação</div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill" id="implementacaoQuatro">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Produção</div>
-                        </div>
-                        <span class="badge bg-success rounded-pill" id="producaoQuatro">R$ 0,00</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Licença Mensal</div>
-                        </div>
-                        <span class="badge bg-secondary rounded-pill" id="licencaQuatro">R$ 0,00</span>
-                    </li>
-
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Redução de Custos do Processo</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="reducaoQuatro">R$ 0,00</span></h5>
-                    </li>
-
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto ">
-                            <div class="fw-bold">Retorno sobre investimento</div>
-                        </div>
-                        <h5><span class="badge bg-primary rounded-pill" id="roiQuatro">0 %</span></h5>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row" style="height: 600px; width: 100%">
-    <div class="col-md-12 mt-3 p-3">
+    <div class="col mt-3 p-3">
         <div class="card">
             <div class="card-body" id="container" style="height: 500px; width: 100%"></div>
+        </div>
+    </div>
+    <div class="col mt-3 p-3">
+        <div class="card">
+            <div class="card-body" id="container1" style="height: 500px; width: 100%"></div>
         </div>
     </div>
 </div>
@@ -669,26 +576,34 @@
             formData["custoColabProcesso"] = $("#custoColabProcesso").val();
             formData["despesasProcesso"] = $("#despesasProcesso").val();
 
-            formData["custoDesenvolvimento"] = $("#custoDesenvolvimento").val();
-            formData["tempoDesenvolvimento"] = $("#tempoDesenvolvimento").val();
-            formData["custoSoftware"] = $("#custoSoftware").val();
+            formData["custoDesenvolvimentoSelenium"] = $("#custoDesenvolvimentoSelenium").val();
+            formData["tempoDesenvolvimentoSelenium"] = $("#tempoDesenvolvimentoSelenium").val();
+            formData["custoSoftwareSelenium"] = $("#custoSoftwareSelenium").val();
 
-            formData["custoImplementacao"] = $("#custoImplementacao").val();
-            formData["custoInfra"] = $("#custoInfra").val();
-            formData["custoTreinamento"] = $("#custoTreinamento").val();
-            formData["custoDocumentacao"] = $("#custoDocumentacao").val();
+            formData["custoImplementacaoSelenium"] = $("#custoImplementacaoSelenium").val();
+            formData["custoInfraSelenium"] = $("#custoInfraSelenium").val();
+            formData["custoTreinamentoSelenium"] = $("#custoTreinamentoSelenium").val();
+            formData["custoDocumentacaoSelenium"] = $("#custoDocumentacaoSelenium").val();
 
-            formData["custoSuporte"] = $("#custoSuporte").val();
-            formData["tempoContratadoSuporte"] = $("#tempoContratadoSuporte").val();
+            formData["custoSuporteSelenium"] = $("#custoSuporteSelenium").val();
+            formData["tempoContratadoSuporteSelenium"] = $("#tempoContratadoSuporteSelenium").val();
+
+            formData["custoDesenvolvimentoUipath"] = $("#custoDesenvolvimentoUipath").val();
+            formData["tempoDesenvolvimentoUipath"] = $("#tempoDesenvolvimentoUipath").val();
+            formData["custoSoftwareUipath"] = $("#custoSoftwareUipath").val();
+
+            formData["custoImplementacaoUipath"] = $("#custoImplementacaoUipath").val();
+            formData["custoInfraUipath"] = $("#custoInfraUipath").val();
+            formData["custoTreinamentoUipath"] = $("#custoTreinamentoUipath").val();
+            formData["custoDocumentacaoUipath"] = $("#custoDocumentacaoUipath").val();
+
+            formData["custoSuporteUipath"] = $("#custoSuporteUipath").val();
+            formData["tempoContratadoSuporteUipath"] = $("#tempoContratadoSuporteUipath").val();
 
             formData["custoApiServico"] = $("#custoApiServico").val();
             formData["custoCaptchaServico"] = $("#custoCaptchaServico").val();
             formData["custoCloudServico"] = $("#custoCloudServico").val();
             formData["custoPlataformaServico"] = $("#custoPlataformaServico").val();
-
-            var data1 = {}
-            var data2 = {}
-            var data3 = {}
 
             // Envia o formulário com o formato JSON para o servidor
             $.ajax({
@@ -696,152 +611,62 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(formData),
+
                 success: function (data) {
-                    console.log(data);
                     $("#container").empty()
+                    $("#container1").empty()
 
-                    $("#custoProcessoInput").text(data.custoProcesso);
-                    $("#custoDesenvolvimentoInput").text(data.custoDesenvolvimento);
-                    $("#custoImplementacaoInput").text(data.custoImplementacao);
-                    $("#custoManutencaoInput").text(data.custoManutencao);
-                    $("#custoServicosInput").text(data.custoServicos);
+                    $("#custoProcessoInput").text(data.processo.custoProcesso);
+                    $("#tempoProcessoInput").text(data.processo.tempoProcesso);
+                    $("#custoColabProcessoInput").text(data.processo.custoColabProcesso);
+                    $("#despesasProcessoInput").text(data.processo.despesasProcesso);
 
-                    $("#desenvolvimentoUm").text(data.selenium.desenvolvendo);
-                    $("#implementacaoUm").text(data.selenium.implementacao);
-                    $("#producaoUm").text(data.selenium.producao);
-                    $("#licencaUm").text(data.selenium.plataforma);
-                    $("#reducaoUm").text(data.selenium.reducao);
-                    $("#roiUm").text(data.selenium.roi);
+                    $("#custoDesenvolvimentoSeleniumInput").text(data.selenium.custoDesenvolvendo);
+                    $("#tempoDesenvolvimentoSeleniumInput").text(data.selenium.tempoDesenvolvendo);
+                    $("#custoSoftwareSeleniumInput").text(data.selenium.custoSoftware);
 
-                    $("#desenvolvimentoDois").text(data.uipath.desenvolvendo);
-                    $("#implementacaoDois").text(data.uipath.implementacao);
-                    $("#producaoDois").text(data.uipath.producao);
-                    $("#licencaDois").text(data.uipath.mensalidade);
-                    $("#reducaoDois").text(data.uipath.reducao);
-                    $("#roiDois").text(data.uipath.roi);
+                    $("#custoImplementacaoSeleniumInput").text(data.selenium.custoImplementacao);
+                    $("#custoInfraSeleniumInput").text(data.selenium.custoInfra);
+                    $("#custoTreinamentoSeleniumInput").text(data.selenium.custoTreinamento);
+                    $("#custoDocumentacaoSeleniumInput").text(data.selenium.custoDocumentacao);
 
-                    $("#desenvolvimentoTres").text(data.automation.desenvolvendo);
-                    $("#implementacaoTres").text(data.automation.implementacao);
-                    $("#producaoTres").text(data.automation.producao);
-                    $("#licencaTres").text(data.automation.mensalidade);
-                    $("#reducaoTres").text(data.automation.reducao);
-                    $("#roiTres").text(data.automation.roi);
+                    $("#custoSuporteSeleniumInput").text(data.selenium.custoSuporte);
+                    $("#tempoContratadoSuporteSeleniumInput").text(data.selenium.tempoContratadoSuporte);
 
-                    $("#desenvolvimentoQuatro").text(data.power.desenvolvendo);
-                    $("#implementacaoQuatro").text(data.power.implementacao);
-                    $("#producaoQuatro").text(data.power.producao);
-                    $("#licencaQuatro").text(data.power.mensalidade);
-                    $("#reducaoQuatro").text(data.power.reducao);
-                    $("#roiQuatro").text(data.power.roi);
+                    $("#custoDesenvolvimentoUipathInput").text(data.uipath.custoDesenvolvendo);
+                    $("#tempoDesenvolvimentoUipathInput").text(data.uipath.tempoDesenvolvendo);
+                    $("#custoSoftwareUipathInput").text(data.uipath.custoSoftware);
 
-                    // create data
-                    data1 = [
-                        ["Desenvolvimento", data.selenium.graficoDesenvolvendo],
-                        ["Implementação", data.selenium.graficoImplementacao],
-                        ["Produção", data.selenium.graficoProducao],
-                    ];
+                    $("#custoImplementacaoUipathInput").text(data.uipath.custoImplementacao);
+                    $("#custoInfraUipathInput").text(data.uipath.custoInfra);
+                    $("#custoTreinamentoUipathInput").text(data.uipath.custoTreinamento);
+                    $("#custoDocumentacaoUipathInput").text(data.uipath.custoDocumentacao);
 
-                    // create data
-                    data2 = [
-                        ["Desenvolvimento", data.uipath.graficoDesenvolvendo],
-                        ["Implementação", data.uipath.graficoImplementacao],
-                        ["Produção", data.uipath.graficoProducao],
-                    ];
+                    $("#custoSuporteUipathInput").text(data.uipath.custoSuporte);
+                    $("#tempoContratadoSuporteUipathInput").text(data.uipath.tempoContratadoSuporte);
 
-                    data3 = [
-                        ["Desenvolvimento", data.automation.graficoDesenvolvendo],
-                        ["Implementação", data.automation.graficoImplementacao],
-                        ["Produção", data.automation.graficoProducao],
-                    ];
+                    $("#custoApiServicoInput").text(data.servicos.custoApiServico);
+                    $("#custoCaptchaServicoInput").text(data.servicos.custoCaptchaServico);
+                    $("#custoCloudServicoInput").text(data.servicos.custoCloudServico);
+                    $("#custoPlataformaServicoInput").text(data.servicos.custoPlataformaServico);
 
-                    data4 = [
-                        ["Desenvolvimento", data.power.graficoDesenvolvendo],
-                        ["Implementação", data.power.graficoImplementacao],
-                        ["Produção", data.power.graficoProducao],
-                    ];
+                    $("#desenvolvimentoSelenium").text(data.selenium.totalCustoDesenvolvendo);
+                    $("#implementacaoSelenium").text(data.selenium.totalCustoImplementacao);
+                    $("#producaoSelenium").text(data.selenium.producao);
+                    $("#licencaSelenium").text(data.selenium.mensalidade);
+                    $("#reducaoSelenium").text(data.selenium.reducao);
+                    $("#roiSelenium").text(data.selenium.roi);
 
-                    // create data
-                    data5 = [
-                        ["Desenvolvimento", data.graficoProcesso],
-                        ["Implementação", data.graficoProcesso],
-                        ["Produção", data.graficoProcesso],
-                    ];
+                    $("#desenvolvimentoUipath").text(data.uipath.totalCustoDesenvolvendo);
+                    $("#implementacaoUipath").text(data.uipath.totalCustoImplementacao);
+                    $("#producaoUipath").text(data.uipath.producao);
+                    $("#licencaUipath").text(data.uipath.mensalidade);
+                    $("#reducaoUipath").text(data.uipath.reducao);
+                    $("#roiUipath").text(data.uipath.roi);
 
-                    // create a chart
-                    var chart = anychart.line();
+                    grafico1(data.grafico.custosProjeto);
+                    grafico2(data.grafico.tempo);
 
-                    // create line chart
-                    var chart = anychart.line();
-
-                    // set chart padding
-                    chart.padding([10, 20, 5, 20]);
-
-                    // turn on chart animation
-                    chart.animation(true);
-
-                    // turn on the crosshair
-                    chart.crosshair(true);
-
-                    // set chart title text settings
-                    chart.title('Custos dos projetos');
-
-                    // set y axis title
-                    chart.yAxis().title('Custo R$');
-
-                    // create a line series and set the data
-                    var Selenium = chart.line(data1);
-                    Selenium.name('Selenium');
-                    Selenium.markers(true);
-                    Selenium.labels(false);
-                    Selenium.labels().fontColor("green");
-                    Selenium.labels().fontWeight(900);
-                    Selenium.labels().format("R$ {%value}");
-
-                    // create a line series and set the data
-                    var UiPath = chart.line(data2);
-                    UiPath.name('UiPath');
-                    UiPath.markers(true);
-                    UiPath.labels(false);
-                    UiPath.labels().fontColor("green");
-                    UiPath.labels().fontWeight(900);
-                    UiPath.labels().format("R$ {%value}");
-
-                    // create a line series and set the data
-                    var Automation = chart.line(data3);
-                    Automation.name('Automation');
-                    Automation.markers(true);
-                    Automation.labels(false);
-                    Automation.labels().fontColor("green");
-                    Automation.labels().fontWeight(900);
-                    Automation.labels().format("R$ {%value}");
-
-                    // create a line series and set the data
-                    var Power = chart.line(data4);
-                    Power.name('Power');
-                    Power.markers(true);
-                    Power.labels(false);
-                    Power.labels().fontColor("green");
-                    Power.labels().fontWeight(900);
-                    Power.labels().format("R$ {%value}");
-
-
-                    // create a line series and set the data
-                    var Processo = chart.line(data5);
-                    Processo.name('Processo');
-                    Processo.markers(true);
-                    Processo.labels(true);
-                    Processo.labels().fontColor("green");
-                    Processo.labels().fontWeight(900);
-                    Processo.labels().format("R$ {%value}");
-
-                    // turn the legend on
-                    chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
-
-                    // set the container id
-                    chart.container("container");
-
-                    // initiate drawing the chart
-                    chart.draw();
                 },
                 error: function (e) {
                     console.log("ERROR : ", e);
@@ -850,6 +675,125 @@
         });
     })
 </script>
+
+<script>
+    function grafico1(dados) {
+        const novaArray = dados.map(el => Object.keys(el).map(key => el[key]));
+
+        var dataSet = anychart.data.set(novaArray);
+
+        // create line chart
+        var chart = anychart.line();
+
+        // set chart padding
+        chart.padding([10, 20, 5, 20]);
+
+        // turn on chart animation
+        chart.animation(true);
+
+        // turn on the crosshair
+        chart.crosshair(true);
+
+        // set chart title text settings
+        chart.title('Custos dos projetos x Tempo');
+
+        // set y axis title
+        chart.yAxis().title('Custo R$');
+
+        // create a line series and set the data
+        var Selenium = dataSet.mapAs({ x: 0, value: 1 });
+
+
+        // create a line series and set the data
+        var UiPath = dataSet.mapAs({ x: 0, value: 2 });
+
+        // create a line series and set the data
+        var Processo = dataSet.mapAs({ x: 0, value: 3 });
+
+        var series;
+
+        series = chart.line(Selenium);
+        series.name('Selenium').stroke('#42f542').size(4);
+        series.hovered().markers(true);
+
+        series = chart.line(UiPath);
+        series.name('UiPath').stroke('#4287f5').size(4);
+        series.hovered().markers(true);
+
+        series = chart.line(Processo);
+        series.name('Processo').stroke('#f59842').size(4);
+        series.hovered().markers(true);
+
+        // turn the legend on
+        chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+
+        // set the container id
+        chart.container("container");
+
+        // initiate drawing the chart
+        chart.draw();
+    }
+</script>
+
+<script>
+    function grafico2(dados) {
+        const novaArray = dados.map(el => Object.keys(el).map(key => el[key]));
+
+        var dataSet = anychart.data.set(novaArray);
+
+        // create line chart
+        var chart = anychart.line();
+
+        // set chart padding
+        chart.padding([10, 20, 5, 20]);
+
+        // turn on chart animation
+        chart.animation(true);
+
+        // turn on the crosshair
+        chart.crosshair(true);
+
+        // set chart title text settings
+        chart.title('Custos dos projetos');
+
+        // set y axis title
+        chart.yAxis().title('Custo R$');
+
+        // create a line series and set the data
+        var Selenium = dataSet.mapAs({ x: 0, value: 1 });
+
+
+        // create a line series and set the data
+        var UiPath = dataSet.mapAs({ x: 0, value: 2 });
+
+        // create a line series and set the data
+        var Processo = dataSet.mapAs({ x: 0, value: 3 });
+
+        var series;
+
+        series = chart.line(Selenium);
+        series.name('Selenium').stroke('#42f542').size(4);
+        series.hovered().markers(true);
+
+        series = chart.line(UiPath);
+        series.name('UiPath').stroke('#4287f5').size(4);
+        series.hovered().markers(true);
+
+        series = chart.line(Processo);
+        series.name('Processo').stroke('#f59842').size(4);
+        series.hovered().markers(true);
+
+        // turn the legend on
+        chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+
+        // set the container id
+        chart.container("container1");
+
+        // initiate drawing the chart
+        chart.draw();
+    }
+</script>
+
 </div>
 
 
