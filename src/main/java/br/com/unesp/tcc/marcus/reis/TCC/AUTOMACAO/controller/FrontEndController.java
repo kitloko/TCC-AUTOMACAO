@@ -10,11 +10,16 @@ public class FrontEndController {
 
     @GetMapping("")
     public String home() {
-        return "Calculadora.html";
+        return "index.html";
     }
 
     @GetMapping("complex")
     public String complex() {
         return "CalculadoraComplex.html";
+    }
+
+    @GetMapping("basic")
+    public String basic() {
+        return "Calculadora.html";
     }
 }

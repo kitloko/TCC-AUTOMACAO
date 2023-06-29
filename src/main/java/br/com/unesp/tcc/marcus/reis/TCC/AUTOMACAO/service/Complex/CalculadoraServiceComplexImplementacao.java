@@ -36,11 +36,11 @@ public class CalculadoraServiceComplexImplementacao {
         Double custoTotalProcesso = implementacaoUipath(calculadora);
 
         if (calculadora.isCustoProcessoProd()) {
-            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-            calculadoraComplexDto.getUipath().setGraficoImplementacao(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
+            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(calculadora.getCustoProcesso()));
+            calculadoraComplexDto.getUipath().setGraficoImplementacao(calculadora.getCustoProcesso() + custoTotalProcesso);
         } else {
-            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-            calculadoraComplexDto.getUipath().setGraficoImplementacao(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
+            calculadoraComplexDto.getUipath().setTotalCustoImplementacao(formatter.format(custoTotalProcesso));
+            calculadoraComplexDto.getUipath().setGraficoImplementacao(custoTotalProcesso);
         }
 
         calculadoraComplexDto.getUipath().setCustoImplementacao(formatter.format(calculadora.getCustoImplementacaoUipath()));

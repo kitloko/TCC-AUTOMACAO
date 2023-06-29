@@ -30,8 +30,8 @@ public class CalculadoraServiceComplexSuporte {
         Double custoTotalSuporte = retornaSuporteUipath(calculadora);
         String tempo = calculadora.getTempoContratadoSuporteSelenium();
 
-        calculadoraComplexDto.getUipath().setCustoSuporte(formatter.format(custoTotalSuporte + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-        calculadoraComplexDto.getUipath().setGraficoSuporte(custoTotalSuporte + calculadoraComplexDto.getUipath().getCustoMensalidade());
+        calculadoraComplexDto.getUipath().setCustoSuporte(formatter.format(custoTotalSuporte));
+        calculadoraComplexDto.getUipath().setGraficoSuporte(custoTotalSuporte);
 
         calculadoraComplexDto.getUipath().setTempoContratadoSup((Integer.parseInt(tempo) / 8) + " dias");
     }

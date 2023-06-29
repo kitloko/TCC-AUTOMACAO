@@ -53,14 +53,13 @@ public class CalculadoraServiceComplexDesenvolvimento {
                             formatter.format(
                                     calculadora.getCustoProcesso()
                                             + custoTotalProcesso
-                                            + calculadoraComplexDto.getUipath().getCustoMensalidade()
                             )
                     );
 
-            calculadoraComplexDto.getUipath().setGraficoDesenvolvendo(calculadora.getCustoProcesso() + custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
+            calculadoraComplexDto.getUipath().setGraficoDesenvolvendo(calculadora.getCustoProcesso() + custoTotalProcesso);
         } else {
-            calculadoraComplexDto.getUipath().setTotalCustoDesenvolvendo(formatter.format(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade()));
-            calculadoraComplexDto.getUipath().setGraficoDesenvolvendo(custoTotalProcesso + calculadoraComplexDto.getUipath().getCustoMensalidade());
+            calculadoraComplexDto.getUipath().setTotalCustoDesenvolvendo(formatter.format(custoTotalProcesso));
+            calculadoraComplexDto.getUipath().setGraficoDesenvolvendo(custoTotalProcesso);
         }
 
         calculadoraComplexDto.getUipath().setCustoDesenvolvendo(formatter.format(custoDesenvolvimento));
