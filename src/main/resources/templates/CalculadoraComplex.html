@@ -64,9 +64,9 @@
                                                    aria-describedby="custoProcesso"
                                                    value="0">
                                             <h4 class="mt-4 card-text" id="custoProcessoInput">R$ 0,00</h4>
-                                            <input type="checkbox" value="true" id="custoProcessoProd"
-                                                   name="custoProcessoProd">
-                                            Adicionar aos Calculos
+<!--                                            <input type="checkbox" value="true" id="custoProcessoProd"-->
+<!--                                                   name="custoProcessoProd">-->
+<!--                                            Adicionar aos Calculos-->
                                         </div>
                                     </div>
                                 </div>
@@ -657,6 +657,7 @@
                 data: JSON.stringify(formData),
 
                 success: function (data) {
+                    console.log(data)
                     $("#container").empty()
                     $("#container1").empty()
 
@@ -667,7 +668,7 @@
 
                     $("#custoDesenvolvimentoSeleniumInput").text(data.selenium.custoDesenvolvendo);
                     $("#tempoDesenvolvimentoSeleniumInput").text(data.selenium.tempoDesenvolvendo);
-                    $("#custoSoftwareSeleniumInput").text(data.selenium.custoSoftware);
+                    $("#custoSoftwareSeleniumInput").text(data.selenium.custoSoftwareDesenvolvendo);
 
                     $("#custoImplementacaoSeleniumInput").text(data.selenium.custoImplementacao);
                     $("#custoInfraSeleniumInput").text(data.selenium.custoInfra);
@@ -675,11 +676,11 @@
                     $("#custoDocumentacaoSeleniumInput").text(data.selenium.custoDocumentacao);
 
                     $("#custoSuporteSeleniumInput").text(data.selenium.custoSuporte);
-                    $("#tempoContratadoSuporteSeleniumInput").text(data.selenium.tempoContratadoSuporte);
+                    $("#tempoContratadoSuporteSeleniumInput").text(data.selenium.tempoContratadoSup);
 
                     $("#custoDesenvolvimentoUipathInput").text(data.uipath.custoDesenvolvendo);
                     $("#tempoDesenvolvimentoUipathInput").text(data.uipath.tempoDesenvolvendo);
-                    $("#custoSoftwareUipathInput").text(data.uipath.custoSoftware);
+                    $("#custoSoftwareUipathInput").text(data.uipath.custoSoftwareDesenvolvendo);
 
                     $("#custoImplementacaoUipathInput").text(data.uipath.custoImplementacao);
                     $("#custoInfraUipathInput").text(data.uipath.custoInfra);
@@ -687,7 +688,7 @@
                     $("#custoDocumentacaoUipathInput").text(data.uipath.custoDocumentacao);
 
                     $("#custoSuporteUipathInput").text(data.uipath.custoSuporte);
-                    $("#tempoContratadoSuporteUipathInput").text(data.uipath.tempoContratadoSuporte);
+                    $("#tempoContratadoSuporteUipathInput").text(data.uipath.tempoContratadoSup);
 
                     $("#custoApiServicoInput").text(data.servicos.custoApiServico);
                     $("#custoCaptchaServicoInput").text(data.servicos.custoCaptchaServico);

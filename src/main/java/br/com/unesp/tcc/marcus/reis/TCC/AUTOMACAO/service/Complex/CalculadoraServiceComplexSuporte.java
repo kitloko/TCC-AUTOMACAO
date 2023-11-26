@@ -28,7 +28,7 @@ public class CalculadoraServiceComplexSuporte {
 
     private void uipath(CalculadoraComplexDto calculadoraComplexDto, CalculadoraComplex calculadora) {
         Double custoTotalSuporte = retornaSuporteUipath(calculadora);
-        String tempo = calculadora.getTempoContratadoSuporteSelenium();
+        String tempo = calculadora.getTempoContratadoSuporteUipath();
 
         calculadoraComplexDto.getUipath().setCustoSuporte(formatter.format(custoTotalSuporte));
         calculadoraComplexDto.getUipath().setGraficoSuporte(custoTotalSuporte);
